@@ -1,0 +1,35 @@
+<svg id="Группа_1" data-name="Группа 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36.844" height="21.5" viewBox="0 0 36.844 21.5">
+<defs>
+    <style>
+      .cls-1 {
+        fill: #ffd662;
+      }
+
+      .cls-1, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        filter: url(#filter);
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+        stroke: #111313;
+        stroke-width: 1px;
+      }
+    </style>
+    <filter id="filter" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="-0.839" dy="0.545" in="SourceAlpha"/>
+      <feGaussianBlur result="blur"/>
+      <feFlood result="flood" flood-opacity="0.32"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="Rectangle_12_copy_2" data-name="Rectangle 12 copy 2" class="cls-1" d="M3.841,2h33L33,19H0Z"/>
+  <g id="_4" data-name="4" class="cls-2">
+    <path class="cls-3" d="M17.5-.011H28.014v10.5L17.5,20.985,6.991,10.487Z"/>
+    <circle class="cls-4" cx="21.344" cy="6.672" r="2.875"/>
+  </g>
+</svg>

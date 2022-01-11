@@ -1,0 +1,110 @@
+{% extends 'ui_interface/index.htm' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<meta name="robots" content="noindex, nofollow"/>
+<div class="ac-gn-blur"></div>
+<div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+<div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
+<script type="text/javascript" src="{% static '/ac/globalnav/7/ru_RU/scripts/ac-globalnav.built.js' %}"></script>
+<main id="main" class="main" role="main" data-page-type="overview">
+    <section class="homepage-section collection-module" data-module-template="ribbon">
+        <div data-unit-id="shop-online" data-analytics-activitymap-region-id="ribbon-shop-online">
+            <div class="module-content">
+                <div class="ribbon-shop-online">
+                    <div class="section-content section-content-shop-online">
+                        <span class="shop-ribbon-copy">В настоящее время страница находится в разработке и часть функций недоступна.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="homepage-section collection-module" data-module-template="promos">
+
+        <div data-unit-id="iphone-13">
+            <div class="module-content">
+
+                <div class="unit-wrapper theme-dark center-copy-wrapper">
+                    <a class="unit-link" href=""
+                        aria-hidden="true" tabindex="-1"></a>
+                    <div class="unit-copy-wrapper">
+
+                        <h4 class="headline">Аккаунт</h4>
+                        <h5 class="subhead" role="presentation">Забыли ID или пароль?</h5>
+
+                        <div class="cta-links">
+                            <a class="icon icon-after icon-chevronright" href="" aria-label="Подробнее">Настройки</a>
+                        </div>
+                    </div>
+                    <div class="unit-image-wrapper">
+                        <figure class="unit-image unit-image-iphone-13-tile-iphone-13">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-unit-id="watch-series-7">
+            <div class="module-content">
+                <div class="unit-wrapper center-copy-wrapper">
+                    <a class="unit-link" href=""
+                        aria-hidden="true" tabindex="-1"></a>
+                    <div class="unit-copy-wrapper">
+                        <span class="violator-frameless violator-frameless-reduced">Новое</span>
+                        <h4 class="headline">Сайт</h4>
+                        <h5 class="subhead" role="presentation">Как пользоваться сайтом?</h5>
+                        <div class="cta-links">
+                            <a class="icon icon-after icon-chevronright" href="" aria-label="Подробнее">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="unit-image-wrapper">
+                        <figure class="unit-image unit-image-watch-series-7-tile-watch">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-unit-id="macbook-pro">
+            <div class="module-content">
+
+                <div class="unit-wrapper no-avail center-copy-wrapper">
+                    <a class="unit-link" href=""
+                        aria-hidden="true" tabindex="-1"></a>
+                    <div class="unit-copy-wrapper">
+                        <h4 class="headline">Баг-репорт</h4>
+                        <h5 class="subhead" role="presentation">Суперпомощь.</h5>
+                        <div class="cta-links">
+                            <a class="icon icon-after icon-chevronright" href="">Отправить репорт</a>
+                        </div>
+                    </div>
+                    <div class="unit-image-wrapper">
+                        <figure class="unit-image unit-image-macbook-pro-tile-macbookpro">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-unit-id="apple-fitness-plus-alt">
+            <div class="module-content">
+                <div class="unit-wrapper theme-dark center-copy-wrapper">
+                    <a class="unit-link" href=""
+                        aria-hidden="true" tabindex="-1"></a>
+                    <div class="unit-copy-wrapper">
+                        <span class="violator-frameless violator-frameless-reduced">Новый&nbsp;сервис</span>
+                        <h5 class="subhead" role="presentation">Отправить свое пожелание или предложение.</h5>
+                        <div class="cta-links">
+                            <a class="icon icon-after icon-chevronright" href=""
+                               aria-label="Подробнее">Отправить</a>
+                            <br class="xsmall">
+                        </div>
+                    </div>
+                    <div class="unit-image-wrapper">
+                        <figure class="unit-image unit-image-apple-fitness-plus-alt-tile-apple-fitness-plus">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!--/main-->
+{% endblock %}

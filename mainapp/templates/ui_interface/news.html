@@ -1,0 +1,49 @@
+{% extends 'ui_interface/index.htm' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="ac-gn-blur"></div>
+<div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+<div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
+<script type="text/javascript" src="{% static '/ac/globalnav/7/ru_RU/scripts/ac-globalnav.built.js' %}"></script>
+<main id="main" class="main" role="main" data-page-type="overview">
+    <section class="homepage-section collection-module" data-module-template="ribbon">
+        <div data-unit-id="shop-online" data-analytics-activitymap-region-id="ribbon-shop-online">
+            <div class="module-content">
+                <div class="ribbon-shop-online">
+                    <div class="section-content section-content-shop-online">
+                        <span class="shop-ribbon-copy">В настоящее время сайт находится в разработке.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="homepage-section collection-module" data-module-template="heroes" data-analytics-region="hero">
+        <div data-unit-id="1">
+            <div class="module-content">
+                <div class="unit-copy-wrapper">
+                    <img style="width: 350px; height: auto;"
+                         src="{% static 'images/pskovgu/logo_blue_pic-removebg-preview.png'%}" alt="Логотип ПсковГУ">
+                    <h2 class="headline">Раздел "Новости" находится в разработке!</h2>
+                    <!--<h3 class="subhead" role="presentation">Oh. So. Pro.</h3>-->
+                    <a class="button" href="{% url 'base' %}" aria-label="Вернуться на главную">Вернуться на главную</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--<section class="section-hero theme-dark-lite" data-anim-lazy-image>
+        <div class="section-content">
+            <div class="copy-container">
+                <h2 class="headline">Сайт в разработке!</h2>
+                <h3 class="subhead" role="presentation">В настоящее время сайт находиться в стадии разработки.
+                    Зайдите позже или дождитесь открытого бета-тестирования!</h3>
+                <div class="cta-links">
+                    <a class="button control" href="{% url 'registration' %}" target="_self"
+                       aria-label="Смотрите презентацию">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </section>-->
+</main>
+<!--/main-->
+{% endblock %}

@@ -1,0 +1,316 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url(fonts/opensans-semibold-webfont.eot);
+    src: url(fonts/opensans-semibold-webfont.eot?#iefix) format('embedded-opentype'), url(fonts/opensans-semibold-webfont.woff2) format('woff2'), url(fonts/opensans-semibold-webfont.woff) format('woff'), url(fonts/opensans-semibold-webfont.ttf) format('truetype'), url(fonts/opensans-semibold-webfont.svg#open_sanssemibold) format('svg');
+    font-style: normal;
+    font-weight: 700
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(fonts/opensans-semibolditalic-webfont.eot);
+    src: url(fonts/opensans-semibolditalic-webfont.eot?#iefix) format('embedded-opentype'), url(fonts/opensans-semibolditalic-webfont.woff2) format('woff2'), url(fonts/opensans-semibolditalic-webfont.woff) format('woff'), url(fonts/opensans-semibolditalic-webfont.ttf) format('truetype'), url(fonts/opensans-semibolditalic-webfont.svg#open_sanssemibold_italic) format('svg');
+    font-style: italic;
+    font-weight: 700
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(fonts/opensans-light-webfont.eot);
+    src: url(fonts/opensans-light-webfont.eot?#iefix) format('embedded-opentype'), url(fonts/opensans-light-webfont.woff2) format('woff2'), url(fonts/opensans-light-webfont.woff) format('woff'), url(fonts/opensans-light-webfont.ttf) format('truetype'), url(fonts/opensans-light-webfont.svg#open_sanslight) format('svg');
+    font-style: normal;
+    font-weight: 300
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(fonts/opensans-lightitalic-webfont.eot);
+    src: url(fonts/opensans-lightitalic-webfont.eot?#iefix) format('embedded-opentype'), url(fonts/opensans-lightitalic-webfont.woff2) format('woff2'), url(fonts/opensans-lightitalic-webfont.woff) format('woff'), url(fonts/opensans-lightitalic-webfont.ttf) format('truetype'), url(fonts/opensans-lightitalic-webfont.svg#open_sanslight_italic) format('svg');
+    font-style: italic;
+    font-weight: 300
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(fonts/opensans-regular-webfont.eot);
+    src: url(fonts/opensans-regular-webfont.eot?#iefix) format('embedded-opentype'), url(fonts/opensans-regular-webfont.woff2) format('woff2'), url(fonts/opensans-regular-webfont.woff) format('woff'), url(fonts/opensans-regular-webfont.ttf) format('truetype'), url(fonts/opensans-regular-webfont.svg#open_sanssemibold) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(fonts/opensans-italic-webfont.eot);
+    src: url(fonts/opensans-italic-webfont.eot?#iefix) format('embedded-opentype'), url(fonts/opensans-italic-webfont.woff2) format('woff2'), url(fonts/opensans-italic-webfont.woff) format('woff'), url(fonts/opensans-italic-webfont.ttf) format('truetype'), url(fonts/opensans-italic-webfont.svg#open_sanssemibold_italic) format('svg');
+    font-weight: 400;
+    font-style: italic
+}
+
+html, body {
+    font-family: "Open Sans", "Ubuntu", Verdana, Arial, Tahoma, Sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #020202;
+}
+
+h1 {
+    font-weight: 300;
+    margin-bottom: 2px;
+    font-size: 18pt;
+    margin-left: 10px;
+}
+
+#main {
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+
+#title, #search-tools, #result-item, #error-message, .misc {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 7px;
+}
+
+
+#title {
+    background: #f0f0f0;
+    text-align: center;
+    font-size: 24pt;
+    font-weight: 300;
+}
+
+#title a {
+    text-decoration: none;
+    color: #020202;
+}
+
+#error-message {
+    background: #7D1616;
+    text-align: center;
+    font-size: 13pt;
+    color: #fff5f5;
+}
+
+#help {
+    text-align: left;
+}
+
+#footer-feedback {
+    font-size: 8pt;
+    color: #707070;
+}
+
+.misc {
+    text-align: center;
+    background: #f0f0f0;
+}
+
+.misc a {
+    color: #020202;
+}
+
+#search-tools {
+    background: #f0f0f0;
+}
+
+.search-select, .search-text {
+    display: block;
+    width: 100%;
+    font-size: 18pt;
+    font-weight: 300;
+    border: none;
+    background: #f0f0f0;
+    border-bottom: 1px solid #c0c0c0;
+    margin-bottom: 10px;
+    color: #020202;
+
+    font-weight: 300;
+    font-family: "Open Sans", "Ubuntu", Verdana, Arial, Tahoma, Sans-serif;
+}
+
+
+.result-item, .schedule-item, #session-notifier {
+
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.result-item {
+    background: #f0f0f0;
+    cursor: pointer;
+}
+
+.schedule-item {
+    background: #f0f0f0;
+}
+
+.result-item-header, .schedule-item-header {
+    font-weight: 300;
+    font-size: 20pt;
+    margin-bottom: 5px;
+}
+
+.result-item-header {
+    border-bottom: 1px solid #c0c0c0;
+    text-decoration: none;
+    display: block;
+    color: #020202;
+}
+
+.schedule-item-header {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.result-item-info, .result-item-additional {
+    font-size: 9pt;
+}
+
+.result-item-additional {
+    color: #505050;
+}
+
+.schedule-day {
+    margin-bottom: 10px;
+}
+
+.schedule-day-name {
+    font-weight: 300;
+    font-size: 15pt;
+}
+
+.schedule-subject {
+    text-indent: 5px;
+    font-weight: 300;
+}
+
+.schedule-additional {
+    text-indent: 15px;
+    font-size: 9pt;
+    color: #505050;
+    margin-bottom: 5px;
+}
+
+
+.schedule-subgroups {
+    margin-left: 15px;
+    font-size: 9pt;
+}
+
+
+/*
+	Style definitions for table view
+*/
+
+#schedule-table {
+    font-size: 10pt;
+    margin: 0 auto;
+}
+
+
+#schedule-table td, #schedule-table th {
+    border: 1px solid #e1e1e1;
+    text-align: center;
+    width: 10%;
+}
+
+#schedule-table th {
+    background: #e0e0e0;
+    font-style: normal;
+    font-weight: normal;
+}
+
+#schedule-table td {
+    font-size: 9pt;
+}
+
+.table-lesson-num {
+    width: 130px;
+    font-weight: 300;
+    font-size: 12pt;
+}
+
+.table-lesson-numbers {
+    /* something will be changed. */
+}
+
+.table-weekdays {
+    height: 100px;
+    font-size: 10pt;
+}
+
+
+.table-subgroup-item {
+    background: #e5ffe5;
+    margin-bottom: 2px;
+}
+
+.table-sg-name {
+    background: #606060;
+    color: #f5f5f5;
+    margin: 1px;
+}
+
+.table-subject {
+
+}
+
+.table-teacher, .table-room {
+    color: #5d5d5d;
+}
+
+.table-teacher a, .table-room a {
+    color: #707070;
+    text-decoration: none;
+}
+
+.table-lessontype {
+    color: #505050;
+}
+
+.table-single {
+    background: #cecefd;
+}
+
+.color-online {
+    background: #ffd8ae;
+}
+
+.color-lecture {
+    background: #beffff;
+}
+
+.color-together {
+    background: #aec0fc;
+}
+
+.color-zach{
+    background: #ffadb7;
+}
+
+.table-empty {
+    background: #f0f0f0;
+}
+
+
+#session-notifier {
+    font-size: 20pt;
+    font-weight: 300;
+    background: #FFCFFD;
+}
+
+.misc.session {
+    text-align: left;
+}
+
+.session-item {
+    margin-bottom: 5px;
+}
+
+.session-lesson-name {
+    font-size: 14pt;
+    font-weight: 300;
+}

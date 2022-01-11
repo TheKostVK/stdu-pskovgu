@@ -1,0 +1,941 @@
+/*------------------------------------*\
+   LOCAL SCREENS
+\*------------------------------------*/
+@media only screen and (min-width: 735px) {
+	.section-hero .hero-video-container .image-hero-endframe {
+		background-image: url("/ru/apple-one/images/overview/hero_endframe__q02zprt6ul6e_large.jpg");
+	}
+}
+
+@media only screen and (min-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 735px) and (min-resolution: 1.5dppx), only screen and (min-width: 735px) and (min-resolution: 144dpi) {
+	.section-hero .hero-video-container .image-hero-endframe {
+		background-image: url("/ru/apple-one/images/overview/hero_endframe__q02zprt6ul6e_large_2x.jpg");
+	}
+}
+
+@media only screen and (min-width: 735px) and (max-width: 1068px) {
+	.section-hero .hero-video-container .image-hero-endframe {
+		background-image: url("/ru/apple-one/images/overview/hero_endframe__q02zprt6ul6e_medium.jpg");
+	}
+}
+
+@media only screen and (min-width: 735px) and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 735px) and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (min-width: 735px) and (max-width: 1068px) and (min-resolution: 144dpi) {
+	.section-hero .hero-video-container .image-hero-endframe {
+		background-image: url("/ru/apple-one/images/overview/hero_endframe__q02zprt6ul6e_medium_2x.jpg");
+	}
+}
+
+@media only screen and (min-width: 735px) and (max-width: 734px) {
+	.section-hero .hero-video-container .image-hero-endframe {
+		background-image: url("/ru/apple-one/images/overview/hero_endframe__q02zprt6ul6e_small.jpg");
+	}
+}
+
+@media only screen and (min-width: 735px) and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 735px) and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (min-width: 735px) and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-hero .hero-video-container .image-hero-endframe {
+		background-image: url("/ru/apple-one/images/overview/hero_endframe__q02zprt6ul6e_small_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-hero .hero-video-container .image-hero-endframe {
+		background-image: url("/ru/apple-one/images/overview/hero_endframe__q02zprt6ul6e_small.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-hero .hero-video-container .image-hero-endframe {
+		background-image: url("/ru/apple-one/images/overview/hero_endframe__q02zprt6ul6e_small_2x.jpg");
+	}
+}
+
+@media only screen and (min-width: 735px) {
+	.section-hero .hero-video-container .image-hero-startframe {
+		background-image: url("/ru/apple-one/images/overview/hero_startframe__biqkrj7kksqa_large.jpg");
+	}
+}
+
+@media only screen and (min-width: 735px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 735px) and (min-resolution: 1.5dppx), only screen and (min-width: 735px) and (min-resolution: 144dpi) {
+	.section-hero .hero-video-container .image-hero-startframe {
+		background-image: url("/ru/apple-one/images/overview/hero_startframe__biqkrj7kksqa_large_2x.jpg");
+	}
+}
+
+@media only screen and (min-width: 735px) and (max-width: 1068px) {
+	.section-hero .hero-video-container .image-hero-startframe {
+		background-image: url("/ru/apple-one/images/overview/hero_startframe__biqkrj7kksqa_medium.jpg");
+	}
+}
+
+@media only screen and (min-width: 735px) and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 735px) and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (min-width: 735px) and (max-width: 1068px) and (min-resolution: 144dpi) {
+	.section-hero .hero-video-container .image-hero-startframe {
+		background-image: url("/ru/apple-one/images/overview/hero_startframe__biqkrj7kksqa_medium_2x.jpg");
+	}
+}
+
+@media only screen and (min-width: 735px) and (max-width: 734px) {
+	.section-hero .hero-video-container .image-hero-startframe {
+		background-image: url("/ru/apple-one/images/overview/hero_startframe__biqkrj7kksqa_small.jpg");
+	}
+}
+
+@media only screen and (min-width: 735px) and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 735px) and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (min-width: 735px) and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-hero .hero-video-container .image-hero-startframe {
+		background-image: url("/ru/apple-one/images/overview/hero_startframe__biqkrj7kksqa_small_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-hero .hero-video-container .image-hero-startframe {
+		background-image: url("/ru/apple-one/images/overview/hero_startframe__biqkrj7kksqa_small.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-hero .hero-video-container .image-hero-startframe {
+		background-image: url("/ru/apple-one/images/overview/hero_startframe__biqkrj7kksqa_small_2x.jpg");
+	}
+}
+
+.section-hero .cards-container .card-music .card-screen {
+	background-image: url("/ru/apple-one/images/overview/hero_screen_music__gjj0jltj4fe6_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+	.section-hero .cards-container .card-music .card-screen {
+		background-image: url("/ru/apple-one/images/overview/hero_screen_music__gjj0jltj4fe6_large_2x.jpg");
+	}
+}
+
+.section-hero .cards-container .card-arcade .card-screen {
+	background-image: url("/ru/apple-one/images/overview/hero_screen_arcade__eeakevx4izgy_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+	.section-hero .cards-container .card-arcade .card-screen {
+		background-image: url("/ru/apple-one/images/overview/hero_screen_arcade__eeakevx4izgy_large_2x.jpg");
+	}
+}
+
+.section-hero .cards-container .card-icloud .card-screen {
+	background-image: url("/ru/apple-one/images/overview/hero_screen_icloud__f6wc6bbswaum_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+	.section-hero .cards-container .card-icloud .card-screen {
+		background-image: url("/ru/apple-one/images/overview/hero_screen_icloud__f6wc6bbswaum_large_2x.jpg");
+	}
+}
+
+.section-hero .cards-container .card-tv .card-screen {
+	background-image: url("/ru/apple-one/images/overview/hero_screen_tv__cgniq8w8u9hy_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+	.section-hero .cards-container .card-tv .card-screen {
+		background-image: url("/ru/apple-one/images/overview/hero_screen_tv__cgniq8w8u9hy_large_2x.jpg");
+	}
+}
+
+.section-discover .flex-container .figure-discover.hero .screen {
+	background-image: url("/ru/apple-one/images/overview/discover_ipad_tv__c7m151sod48y_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.hero .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_ipad_tv__c7m151sod48y_large_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-discover .flex-container .figure-discover.hero .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_ipad_tv__c7m151sod48y_medium.jpg");
+	}
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.hero .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_ipad_tv__c7m151sod48y_medium_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container .figure-discover.hero .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_ipad_tv__c7m151sod48y_small.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.hero .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_ipad_tv__c7m151sod48y_small_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container .figure-discover.hero .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_ipad_tv__c7m151sod48y_small.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.hero .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_ipad_tv__c7m151sod48y_small_2x.jpg");
+	}
+}
+
+.section-discover .flex-container .figure-discover.music .screen {
+	background-image: url("/ru/apple-one/images/overview/discover_iphone_music__fn9wcil3lze6_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.music .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_music__fn9wcil3lze6_large_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-discover .flex-container .figure-discover.music .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_music__fn9wcil3lze6_medium.jpg");
+	}
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.music .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_music__fn9wcil3lze6_medium_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container .figure-discover.music .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_music__fn9wcil3lze6_small.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.music .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_music__fn9wcil3lze6_small_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container .figure-discover.music .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_music__fn9wcil3lze6_small.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.music .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_music__fn9wcil3lze6_small_2x.jpg");
+	}
+}
+
+.section-discover .flex-container .figure-discover.music .image-chiclet-music {
+	background-image: url("/ru/apple-one/images/overview/discover_icon_music__kq072r31akq6_large.png");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.music .image-chiclet-music {
+		background-image: url("/ru/apple-one/images/overview/discover_icon_music__kq072r31akq6_large_2x.png");
+	}
+}
+
+.section-discover .flex-container .figure-discover.icloud .screen {
+	background-image: url("/ru/apple-one/images/overview/discover_iphone_music__fn9wcil3lze6_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.icloud .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_music__fn9wcil3lze6_large_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-discover .flex-container .figure-discover.icloud .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_music__fn9wcil3lze6_medium.jpg");
+	}
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.icloud .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_music__fn9wcil3lze6_medium_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container .figure-discover.icloud .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_music__fn9wcil3lze6_small.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.icloud .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_music__fn9wcil3lze6_small_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container .figure-discover.icloud .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_music__fn9wcil3lze6_small.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.icloud .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_music__fn9wcil3lze6_small_2x.jpg");
+	}
+}
+
+.section-discover .flex-container .figure-discover.icloud .image-chiclet-icloud {
+	background-image: url("/ru/apple-one/images/overview/discover_icon_music__kq072r31akq6_large.png");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.icloud .image-chiclet-icloud {
+		background-image: url("/ru/apple-one/images/overview/discover_icon_music__kq072r31akq6_large_2x.png");
+	}
+}
+
+.section-discover .flex-container .figure-discover.news .screen {
+	background-image: url("/ru/apple-one/images/overview/discover_mac_news__fuyzupsth52e_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.news .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_mac_news__fuyzupsth52e_large_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-discover .flex-container .figure-discover.news .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_mac_news__fuyzupsth52e_medium.jpg");
+	}
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.news .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_mac_news__fuyzupsth52e_medium_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container .figure-discover.news .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_mac_news__fuyzupsth52e_small.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.news .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_mac_news__fuyzupsth52e_small_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container .figure-discover.news .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_mac_news__fuyzupsth52e_small.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.news .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_mac_news__fuyzupsth52e_small_2x.jpg");
+	}
+}
+
+.section-discover .flex-container .figure-discover.news .image-chiclet-news {
+	background-image: url("/ru/apple-one/images/overview/discover_icon_icloud__f89g00kqfviy_large.png");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.news .image-chiclet-news {
+		background-image: url("/ru/apple-one/images/overview/discover_icon_icloud__f89g00kqfviy_large_2x.png");
+	}
+}
+
+.section-discover .flex-container .figure-discover.mac-tv .screen {
+	background-image: url("/ru/apple-one/images/overview/discover_mac_tv__gccl4m67h5e2_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.mac-tv .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_mac_tv__gccl4m67h5e2_large_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-discover .flex-container .figure-discover.mac-tv .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_mac_tv__gccl4m67h5e2_medium.jpg");
+	}
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.mac-tv .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_mac_tv__gccl4m67h5e2_medium_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container .figure-discover.mac-tv .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_mac_tv__gccl4m67h5e2_small.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.mac-tv .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_mac_tv__gccl4m67h5e2_small_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container .figure-discover.mac-tv .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_mac_tv__gccl4m67h5e2_small.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.mac-tv .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_mac_tv__gccl4m67h5e2_small_2x.jpg");
+	}
+}
+
+.section-discover .flex-container .figure-discover.ipad-music .screen {
+	background-image: url("/ru/apple-one/images/overview/discover_ipad_music__f3uo7g9oxy2y_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.ipad-music .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_ipad_music__f3uo7g9oxy2y_large_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-discover .flex-container .figure-discover.ipad-music .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_ipad_music__f3uo7g9oxy2y_medium.jpg");
+	}
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.ipad-music .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_ipad_music__f3uo7g9oxy2y_medium_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container .figure-discover.ipad-music .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_ipad_music__f3uo7g9oxy2y_small.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.ipad-music .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_ipad_music__f3uo7g9oxy2y_small_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container .figure-discover.ipad-music .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_ipad_music__f3uo7g9oxy2y_small.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.ipad-music .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_ipad_music__f3uo7g9oxy2y_small_2x.jpg");
+	}
+}
+
+.section-discover .subscribe-row .figure-subscribe.iphone-arcade .screen {
+	background-image: url("/ru/apple-one/images/overview/discover_iphone_arcade__gm36bpk30s6e_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+	.section-discover .subscribe-row .figure-subscribe.iphone-arcade .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_arcade__gm36bpk30s6e_large_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-discover .subscribe-row .figure-subscribe.iphone-arcade .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_arcade__gm36bpk30s6e_medium.jpg");
+	}
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+	.section-discover .subscribe-row .figure-subscribe.iphone-arcade .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_arcade__gm36bpk30s6e_medium_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .subscribe-row .figure-subscribe.iphone-arcade .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_arcade__gm36bpk30s6e_small.png");
+	}
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-discover .subscribe-row .figure-subscribe.iphone-arcade .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_arcade__gm36bpk30s6e_small_2x.png");
+	}
+}
+
+.section-discover .subscribe-row .figure-subscribe.airpods-watch .image-watch-music {
+	background-image: url("/ru/apple-one/images/overview/discover_watch_music__c0nac3e1p86e_large.png");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+	.section-discover .subscribe-row .figure-subscribe.airpods-watch .image-watch-music {
+		background-image: url("/ru/apple-one/images/overview/discover_watch_music__c0nac3e1p86e_large_2x.png");
+	}
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-discover .subscribe-row .figure-subscribe.airpods-watch .image-watch-music {
+		background-image: url("/ru/apple-one/images/overview/discover_watch_music__c0nac3e1p86e_medium.png");
+	}
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+	.section-discover .subscribe-row .figure-subscribe.airpods-watch .image-watch-music {
+		background-image: url("/ru/apple-one/images/overview/discover_watch_music__c0nac3e1p86e_medium_2x.png");
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .subscribe-row .figure-subscribe.airpods-watch .image-watch-music {
+		background-image: url("/ru/apple-one/images/overview/discover_watch_music__c0nac3e1p86e_small.png");
+	}
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-discover .subscribe-row .figure-subscribe.airpods-watch .image-watch-music {
+		background-image: url("/ru/apple-one/images/overview/discover_watch_music__c0nac3e1p86e_small_2x.png");
+	}
+}
+
+.section-hero .cards-container .card-fitness .card-screen {
+	background-image: url("/ru/apple-one/images/overview/hero_screen_fitness__ent6xf7lxtua_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+	.section-hero .cards-container .card-fitness .card-screen {
+		background-image: url("/ru/apple-one/images/overview/hero_screen_fitness__ent6xf7lxtua_large_2x.jpg");
+	}
+}
+
+.section-discover .flex-container .figure-discover.fitness-override .image-watch-fitness {
+	background-image: url("/ru/apple-one/images/overview/discover_watch_fitness_override__eglj3un2mqeu_large.png");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.fitness-override .image-watch-fitness {
+		background-image: url("/ru/apple-one/images/overview/discover_watch_fitness_override__eglj3un2mqeu_large_2x.png");
+	}
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-discover .flex-container .figure-discover.fitness-override .image-watch-fitness {
+		background-image: url("/ru/apple-one/images/overview/discover_watch_fitness_override__eglj3un2mqeu_medium.png");
+	}
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.fitness-override .image-watch-fitness {
+		background-image: url("/ru/apple-one/images/overview/discover_watch_fitness_override__eglj3un2mqeu_medium_2x.png");
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container .figure-discover.fitness-override .image-watch-fitness {
+		background-image: url("/ru/apple-one/images/overview/discover_watch_fitness_override__eglj3un2mqeu_small.png");
+	}
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.fitness-override .image-watch-fitness {
+		background-image: url("/ru/apple-one/images/overview/discover_watch_fitness_override__eglj3un2mqeu_small_2x.png");
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container .figure-discover.fitness-override .image-watch-fitness {
+		background-image: url("/ru/apple-one/images/overview/discover_watch_fitness_override__eglj3un2mqeu_small.png");
+	}
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.fitness-override .image-watch-fitness {
+		background-image: url("/ru/apple-one/images/overview/discover_watch_fitness_override__eglj3un2mqeu_small_2x.png");
+	}
+}
+
+.section-discover .flex-container .figure-discover.fitness-override .screen {
+	background-image: url("/ru/apple-one/images/overview/discover_iphone_fitness_override__dekyowqyy2i6_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.fitness-override .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_fitness_override__dekyowqyy2i6_large_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-discover .flex-container .figure-discover.fitness-override .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_fitness_override__dekyowqyy2i6_medium.jpg");
+	}
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.fitness-override .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_fitness_override__dekyowqyy2i6_medium_2x.jpg");
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container .figure-discover.fitness-override .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_fitness_override__dekyowqyy2i6_small.png");
+	}
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.fitness-override .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_fitness_override__dekyowqyy2i6_small_2x.png");
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container .figure-discover.fitness-override .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_fitness_override__dekyowqyy2i6_small.png");
+	}
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+	.section-discover .flex-container .figure-discover.fitness-override .screen {
+		background-image: url("/ru/apple-one/images/overview/discover_iphone_fitness_override__dekyowqyy2i6_small_2x.png");
+	}
+}
+
+/*------------------------------------*\
+   END LOCAL SCREENS
+\*------------------------------------*/
+/*------------------------------------*\
+   START LOCAL FIXES
+\*------------------------------------*/
+.section-plans .plans-tiles.extra-copy h3 {
+	font-size: 30px;
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-plans .plans-tiles.extra-copy h3 {
+		font-size: 21px;
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-plans .plans-tiles.extra-copy h3 {
+		font-size: 28px;
+	}
+}
+
+.section-discover .flex-container.layout-1 {
+	padding-bottom: 660px;
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-discover .flex-container.layout-1 {
+		padding-bottom: 420px;
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container.layout-1 {
+		padding-bottom: 60px;
+	}
+}
+
+.section-discover .flex-container.layout-1 .subscribe-row {
+	display: flex;
+	order: 9;
+	padding-top: 130px;
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container.layout-1 .subscribe-row {
+		display: none;
+	}
+}
+
+.section-discover .subscribe-row .figure-subscribe.ipad-news {
+	display: none;
+}
+
+.section-discover .typography-section-headline {
+	padding-right: 30px;
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-discover .typography-section-headline {
+		padding-right: 10px;
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .typography-section-headline {
+		padding-right: 0px;
+	}
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-discover .flex-container .figure-discover.hero .chiclet-caption .image-chiclet {
+		margin-left: 0;
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-plans .plan-tile.plan-family .typography-plan-copy {
+		padding-bottom: 4px;
+	}
+}
+
+@media only screen and (max-width: 1068px) and (min-width: 735px) {
+	.section-discover .flex-container.layout-1 .figure-discover.ipad-music {
+		margin-top: -450px;
+	}
+}
+
+@media only screen and (min-width: 1069px) {
+	.section-discover .flex-container.layout-1 .figure-discover.music {
+		margin-top: 0;
+	}
+}
+
+.section-discover.layout-1 .flex-container {
+	padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-discover.layout-1 .flex-container {
+		padding-bottom: 0;
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover.layout-1 .flex-container {
+		padding-bottom: 79px;
+	}
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-discover.layout-1.alt-1 .flex-container .subscribe-row {
+		padding-bottom: 0;
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-free-trial .button {
+		white-space: normal;
+		max-width: 320px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.section-hero .cards-container, .section-router .chiclet-container {
+	justify-content: center;
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-hero .cards-container {
+		justify-content: space-between;
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-router .chiclet-container {
+		justify-content: space-between;
+	}
+}
+
+.section-router .chiclet {
+	margin-left: 13px;
+	margin-right: 13px;
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-router .chiclet {
+		margin-left: 9px;
+		margin-right: 9px;
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-router .chiclet {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.section-hero .cards-container .card {
+	margin-left: 13px;
+	margin-right: 13px;
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-hero .cards-container .card {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-hero .cards-container .card {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.section-content {
+	width: 990px;
+}
+
+@media only screen and (min-width: 1441px) {
+	.section-content {
+		width: 990px;
+	}
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-content {
+		width: 692px;
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-content {
+		width: 87.5%;
+	}
+}
+
+.section-content {
+	width: 1010px;
+}
+
+@media only screen and (min-width: 1441px) {
+	.section-content {
+		width: 1010px;
+	}
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-content {
+		width: 692px;
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-content {
+		width: 87.5%;
+	}
+}
+
+.section-discover .flex-container .typography-discover-copy.feature-1-copy {
+	position: relative;
+	left: -45px;
+	margin-top: 169px;
+	padding-bottom: 350px;
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-discover .flex-container .typography-discover-copy.feature-1-copy {
+		margin-top: 122px;
+		left: auto;
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container .typography-discover-copy.feature-1-copy {
+		margin-top: 0;
+		padding-bottom: 0;
+	}
+}
+
+.section-discover .flex-container .feature-2-copy {
+	margin-top: 274px;
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-discover .flex-container .feature-2-copy {
+		margin-top: -140px;
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container .feature-2-copy {
+		margin-top: 0;
+	}
+}
+
+.section-discover .flex-container .feature-3-copy {
+	margin-top: 70px;
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-discover .flex-container .feature-3-copy {
+		margin-top: 58px;
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container .feature-3-copy {
+		margin-top: 0;
+	}
+}
+
+.section-discover .flex-container .figure-discover.icloud {
+	margin-top: 62px;
+}
+
+html.text-zoom .section-discover .flex-container .figure-discover.icloud {
+	margin-top: 88px;
+}
+
+@media only screen and (max-width: 1068px) {
+	.section-discover .flex-container .figure-discover.icloud {
+		margin-top: 70px;
+	}
+}
+
+@media only screen and (max-width: 734px) {
+	.section-discover .flex-container .figure-discover.icloud {
+		margin-top: 47px;
+	}
+}
+
+@media only screen and (min-width: 1069px) {
+	.section-plans .plan-family .headline-family {
+		padding-top: 40px;
+	}
+	.section-plans .plan-premier .headline-premier {
+		padding-top: 80px;
+	}
+	.section-plans .plan-tile.plan-individual .typography-plan-copy {
+		min-height: 84px;
+	}
+}
+
+@media only screen and (min-width: 735px) and (max-width: 1068px) {
+	.section-plans .plan-family .headline-family {
+		padding-top: 32px;
+	}
+	.section-plans .plan-premier .headline-premier {
+		padding-top: 64px;
+	}
+	.section-plans .plan-tile {
+		padding-right: 18px;
+	}
+	.section-plans .plan-tile.plan-individual .typography-plan-copy {
+		min-height: 72px;
+	}
+}
+
+/*------------------------------------*\
+   END LOCAL FIXES
+\*------------------------------------*/

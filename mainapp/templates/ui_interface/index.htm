@@ -1,0 +1,167 @@
+{% extends 'ui_interface/nav_and_footer.html' %}
+{% load static %}
+{% block header %}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Metadata -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="Расписание занятий ПсковГУ онлайн">
+    <meta name="keywords"
+          content="расписание, пгу, псковгу, расписание онлайн, расписание занятий, преподаватели псковгу, расписание онлайн">
+    <!-- Stylesheets -->
+    <meta name="yandex-verification" content="d90289c2aa82261e"/>
+    <meta name="google-site-verification" content="bbzCVeByEoJ8Gwk9pDD_toE8oyifbJLQC3an-sMYiHc" />
+    <link type="image/x-icon" rel="shortcut icon" href="{% static '/images/pskovgu/favicon.ico' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/ac/globalnav/7/ru_RU/styles/ac-globalnav.built.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static '/ac/localnav/6/styles/ac-localnav.built.css' %}"/>
+    <link rel="stylesheet" type="text/css"
+          href="{% static '/ac/globalfooter/7/ru_RU/styles/ac-globalfooter.built.css' %}"/>
+    <link rel="stylesheet" href="{% static '/wss/fonts' %}"/>
+    <link rel="stylesheet" href="{% static '/v/home/hi/built/styles/overview.built.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static '/ru/home/styles/overview.css' %}" type="text/css/">
+    <link rel="stylesheet" href="{% static '/v/home/hi/built/styles/main.built.css' %}" type="text/css">
+    <script src="{% static '/v/home/hi/built/scripts/head.built.js' %}" type="text/javascript" charset="utf-8"></script>
+    <title>Расписание занятий «ПсковГУ»</title>
+    <meta name="description" content="Расписание занятий «ПсковГУ» для групп на 2021-2022 учебный год."/>
+</head>
+{% endblock %}
+{% block content %}
+<div class="ac-gn-blur"></div>
+<div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+<div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
+<script type="text/javascript" src="{% static '/ac/globalnav/7/ru_RU/scripts/ac-globalnav.built.js' %}"></script>
+<style>
+    @media screen and (max-width: 1160px) {
+        .copy-container {
+            overflow-y: scroll;
+        }
+    }
+
+    @media screen and (min-width: 1750px) {
+        .copy-container {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .updatetext {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 8px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .updatetext {
+            font-size: 12px;
+            text-align: right;
+            margin-top: 10px;
+        }
+    }
+</style>
+<main class="main" role="main" data-page-type="overview">
+    {% if not request.user.is_authenticated %}
+    <section class="homepage-section collection-module" data-module-template="ribbon">
+        <div data-unit-id="shop-online" data-analytics-activitymap-region-id="ribbon-shop-online">
+            <div class="module-content">
+                <div class="ribbon-shop-online">
+                    <div class="section-content section-content-shop-online">
+                        <span class="shop-ribbon-copy">В настоящее время сайт находится в разработке.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="homepage-section collection-module" data-module-template="heroes"
+             data-analytics-region="hero">
+        <div data-unit-id="1">
+            <div class="module-content">
+                <div class="unit-copy-wrapper">
+                    <img style="width: 320px; height: auto;"
+                         src="{% static 'images/pskovgu/logo_blue_pic-removebg-preview.png' %}"
+                         alt="Логотип ПсковГУ">
+                    <h3 style="margin-bottom: 10px" class="headline">Расписание ПсковГУ</h3>
+                    <!--<a class="button" href="{% url 'login' %}" aria-label="Регистрация">Авторизация</a>-->
+                    <a class="button" href="{% url 'registration' %}" aria-label="Регистрация">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% else %}
+    <link rel="stylesheet" href="{% static 'list_group/main.built.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'list_group/overview.built.css' %}" type="text/css">
+    <link href="{% static 'timetable/css/css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'timetable/css/style.css' %}" rel="stylesheet" type="text/css">
+    {% if not cart.products.count %}
+    <style>
+        @media screen and (max-width: 600px) {
+            .copy-container {
+                height: 60%;
+                margin-top: 150px;
+                margin-bottom: 100px
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .copy-container {
+                height: 40%;
+                margin-top: 150px;
+                margin-bottom: 100px
+            }
+        }
+    </style>
+    <div class="copy-container">
+        <h2 class="typography-section-headline plans-headline large-10 medium-12 small-12 center">
+            Избранное</h2>
+        <p class="typography-eyebrow large-7 medium-9 small-12 center">Избранное - это ваш список
+            отслеживаемых групп. Пользоваться
+            очень легко, добавляйте новые или редактируйте уже имеющиеся группы.</p>
+        <br>
+        <a href="{% url 'list_group' %}" class="button">
+            <span>Список групп</span>
+        </a>
+    </div>
+    {% else %}
+    <section class="theme-light" data-anim-scroll-group="Section - Plans" data-component-list="LocalNavThemeSwitcher"
+             style="margin-top: 30px; margin-bottom: 30px">
+        <div class="table-container" style="border-radius: 15px; margin-left: 15px;margin-right: 15px;">
+            {% for item in cart.products.all %}
+            {% if item.product.active != 0 %}
+            <div>
+                <p style="margin-bottom: 20px; text-align: center" href=""
+                   class="typography-plan-copy">
+                    Расписание для
+                    <a href="{{ item.product.get_absolute_url }}">{{ item.product.title }}</a></p>
+            </div>
+            <div class="copy-container" style="border-radius: 5px;" id="includedContent">
+                {% include item.product.url_table %}
+            </div>
+            <div style="text-align: center; margin-bottom: 50px;">
+                <a href="{{ item.product.get_absolute_url }}" class="button"
+                   style="text-align: center; margin-top: 30px; margin-bottom: 30px; background: #424245">
+                    <span>Полное расписание</span>
+                </a>
+            </div>
+            {% else %}
+            <div class="copy-container">
+                <h2 class="typography-section-headline plans-headline large-10 medium-12 small-12 center">
+                    Недоступно!</h2>
+                <p class="typography-eyebrow large-7 medium-9 small-12 center">К сожалению данное расписание недоступно
+                    на данный момент, вернитесь позже!</p>
+                <br>
+                <a href="{% url 'list_group' %}" class="button">
+                    <span>Список групп</span>
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+    {% endif %}
+</main>
+{% endblock %}

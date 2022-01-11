@@ -1,0 +1,129 @@
+{% extends 'ui_interface/nav_and_footer.html' %}
+{% load static %}
+{% block header %}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Metadata -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="Расписание занятий ПсковГУ онлайн для группы {{ product.title }}">
+    <meta name="keywords"
+          content="расписание, пгу, псковгу, расписание онлайн, расписание занятий, преподаватели псковгу, расписание онлайн">
+    <!-- Stylesheets -->
+    <link type="image/x-icon" rel="shortcut icon" href="{% static '/images/pskovgu/favicon.ico' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/ac/globalnav/7/ru_RU/styles/ac-globalnav.built.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static '/ac/localnav/6/styles/ac-localnav.built.css' %}"/>
+    <link rel="stylesheet" type="text/css"
+          href="{% static '/ac/globalfooter/7/ru_RU/styles/ac-globalfooter.built.css' %}"/>
+    <link rel="stylesheet" href="{% static '/wss/fonts' %}"/>
+    <link rel="stylesheet" href="{% static '/v/home/hi/built/styles/overview.built.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static '/ru/home/styles/overview.css' %}" type="text/css/">
+    <link rel="stylesheet" href="{% static '/v/home/hi/built/styles/main.built.css' %}" type="text/css">
+    <script src="{% static '/v/home/hi/built/scripts/head.built.js' %}" type="text/javascript" charset="utf-8"></script>
+    <title>Расписание занятий «ПсковГУ» для группы {{ product.title }}</title>
+    <meta name="description"
+          content="Расписание занятий «ПсковГУ» для группы {{ product.title }} на 2021-2022 учебный год."/>
+</head>
+{% endblock %}
+{% block content %}
+<meta name="robots" content="noindex, nofollow"/>
+<div class="ac-gn-blur"></div>
+<div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+<div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
+<script type="text/javascript" src="{% static '/ac/globalnav/7/ru_RU/scripts/ac-globalnav.built.js' %}"></script>
+<style>
+    @media screen and (max-width: 1160px) {
+        .copy-container {
+            overflow-y: scroll;
+        }
+    }
+
+    @media screen and (min-width: 1750px) {
+        .copy-container {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+        }
+    }
+
+    .sticky__half {
+        width: 50%;
+        min-height: 800px;
+        border: 10px solid #000;
+    }
+
+    .sticky__body {
+        padding: 60px;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 100px;
+        border: 10px solid #00f2fe;
+    }
+
+    .add_palitra {
+        display: block;
+        position: fixed;
+        bottom: 5%;
+        z-index: 99999;
+        left: 49%;
+        transform: translate(-50%, -50%)
+    }
+
+    @media screen and (max-width: 480px) {
+        .add_palitra {
+            bottom: 5% !important;
+        }
+    }
+</style>
+{% if not request.user.is_authenticated %}
+<a href="{% url 'registration' %}" class="button add_palitra">
+    <span>Регистрация</span>
+</a>
+{% endif %}
+<main class="main" role="main" data-page-type="overview">
+    <link rel="stylesheet" href="{% static 'list_group/main.built.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'list_group/overview.built.css' %}" type="text/css">
+    <link href="{% static 'timetable/css/css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'timetable/css/style.css' %}" rel="stylesheet" type="text/css">
+    <section class="theme-light" data-anim-scroll-group="Section - Plans"
+             data-component-list="LocalNavThemeSwitcher" style="margin-top: 30px; margin-bottom: 30px">
+        <div class="table-container" style="border-radius: 15px; margin-left: 15px; margin-right: 15px;">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+            {% if product.active != 0 %}
+            <div>
+                <p style="margin-bottom: 5px; text-align: center" href=""
+                   class="typography-plan-copy">
+                    Расписание для
+                    <a href="{% url 'timetable' %}">{{ product.title }}</a></p>
+            </div>
+            {% include product.url_all_tables %}
+            {% endif %}
+            <style>
+                @media screen and (max-width: 600px) {
+                    .updatetext {
+                        font-size: 12px;
+                        text-align: center;
+                        margin-top: 8px;
+                    }
+                }
+
+                @media screen and (min-width: 1200px) {
+                    .updatetext {
+                        font-size: 12px;
+                        text-align: right;
+                        margin-top: 10px;
+                    }
+                }
+            </style>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('html, body').animate({
+                        scrollTop: $('#scroll').offset().top
+                    }, 'slow');
+                });
+            </script>
+        </div>
+    </section>
+</main>
+{% endblock %}

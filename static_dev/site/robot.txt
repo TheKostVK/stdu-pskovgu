@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:
+Disallow: https://stdu-pskovgu.ru/cart/
+Disallow: https://stdu-pskovgu.ru/support/
+Disallow: https://stdu-pskovgu.ru/timetable/
+Disallow: https://stdu-pskovgu.ru/profile/

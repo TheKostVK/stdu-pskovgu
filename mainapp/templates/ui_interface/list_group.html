@@ -1,0 +1,541 @@
+{% extends 'ui_interface/index.htm' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<script type="text/javascript" src="{% static '/ac/globalnav/7/ru_RU/scripts/ac-globalnav.built.js' %}"></script>
+<main id="main" class="main" role="main" data-page-type="overview">
+
+
+    <section class="section section-faq layout-1" data-component-list="Accordion"
+             data-anim-scroll-group="Section - FAQ">
+        <link rel="stylesheet" href="{% static 'list_group/fonts' %}">
+        <link rel="stylesheet" href="{% static 'list_group/main.built.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'list_group/overview.built.css' %}" type="text/css">
+        <script src="{% static 'list_group/main.built.js' %}" type="text/javascript" charset="utf-8"></script>
+        <div class="section-content">
+            <img class="typography-section-headline typography-section-headline-alt large-centered large-8 medium-8 small-12"
+                 style="width: 350px; height: auto; display: block;
+    margin-left: auto;
+    margin-right: auto"
+                 src="{% static 'images/pskovgu/logo_blue_pic-removebg-preview.png'%}" alt="Логотип ПсковГУ">
+            <h2 class="typography-section-headline typography-section-headline-alt large-centered large-8 medium-8 small-12">
+                Список <br>Факультетов</h2>
+
+            <ul class="faqs">
+                <style>
+                    @media screen and (max-width: 600px) {
+                                    .copy-container {
+                                        overflow-y: scroll;
+                                    }
+                                }
+                </style>
+                {% for category in categories %}
+                {% if category.name != 'Иностранные студенты' %}
+                <li>
+                    <div class="question" data-accordion="accordion-item-{{ category.ordinal_place }}">
+                        <p class="typography-faq-question">{{ category.name }}</p>
+                        <button class="plus-icon typography-icon-faq">
+                            <span class="open-aria visuallyhidden" aria-hidden="true">Откройте, чтобы увидеть список курсов</span>
+                            <span class="close-aria visuallyhidden">Закрыть</span>
+                        </button>
+                    </div>
+                    <div id="accordion-item-{{ category.ordinal_place }}" class="transition-container"
+                         aria-hidden="true" style="">
+
+                        <div class="answer">
+                            <p class="typography-faq-answer">Для добавления группы в избранное, просто нажмите на
+                                неё.</p>
+                            <style>
+                                .table {
+                                    width: 100%;
+                                    border: none;
+                                    margin-bottom: 20px;
+                                    display: inline-block;
+                                }
+
+                                .table tbody {
+                                    display: flex;
+                                }
+
+                                .table tbody th {
+                                    font-weight: bold;
+                                    text-align: center;
+                                    border: none;
+                                    padding: 10px 10px;
+                                    background: #d8d8d8;
+                                    font-size: 14px;
+                                }
+
+                                .table tbody td {
+
+                                    text-align: center;
+                                    border: none;
+                                    padding: 10px 10px;
+                                    font-size: 14px;
+                                    vertical-align: top;
+                                    background: #d8d8d8;
+                                }
+
+                                .table tbody tr {
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex-wrap: wrap;
+                                    width: 100px;
+                                }
+                                .table tbody tr th{
+                                    width: 100px;
+                                }
+                            </style>
+                            <br>
+                            <div class="copy-container" style="border-radius: 5px;">
+                            {% if request.user.is_authenticated %}
+                            <table class="table">
+                                <tbody>
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">1 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Первый курс' %}
+                                    {% if not product in cart %}
+                                    <td class="table-time">
+                                        <a href="{% url 'add_to_cart' slug=product.slug %}">{{ product.title }}</a>
+                                    </td>
+                                    {% else %}
+                                    <td class="table-time">
+                                        <a href="{{ product.get_absolute_url }}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">2 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Второй курс' %}
+                                    {% if not product in cart %}
+                                    <td class="table-time">
+                                        <a href="{% url 'add_to_cart' slug=product.slug %}">{{ product.title }}</a>
+                                    </td>
+                                    {% else %}
+                                    <td class="table-time">
+                                        <a href="{{ product.get_absolute_url }}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">3 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Третий курс' %}
+                                    {% if not product in cart %}
+                                    <td class="table-time">
+                                        <a href="{% url 'add_to_cart' slug=product.slug %}">{{ product.title }}</a>
+                                    </td>
+                                    {% else %}
+                                    <td class="table-time">
+                                        <a href="{{ product.get_absolute_url }}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">4 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Четвертый курс' %}
+                                    {% if not product in cart %}
+                                    <td class="table-time">
+                                        <a href="{% url 'add_to_cart' slug=product.slug %}">{{ product.title }}</a>
+                                    </td>
+                                    {% else %}
+                                    <td class="table-time">
+                                        <a href="{{ product.get_absolute_url }}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">5 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Пятый курс' %}
+                                    {% if not product in cart %}
+                                    <td class="table-time">
+                                        <a href="{% url 'add_to_cart' slug=product.slug %}">{{ product.title }}</a>
+                                    </td>
+                                    {% else %}
+                                    <td class="table-time">
+                                        <a href="{{ product.get_absolute_url }}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">6 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Шестой курс' %}
+                                    {% if not product in cart %}
+                                    <td class="table-time">
+                                        <a href="{% url 'add_to_cart' slug=product.slug %}">{{ product.title }}</a>
+                                    </td>
+                                    {% else %}
+                                    <td class="table-time">
+                                        <a href="{{ product.get_absolute_url }}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                </tbody>
+                            </table>
+                            {% else %}
+                            <table class="table">
+                                <tbody>
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">1 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Первый курс' %}
+                                    <td class="table-time">
+                                        <a href="{% url 'registration' %}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">2 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Второй курс' %}
+                                    <td class="table-weekdays">
+                                        <a href="{% url 'registration' %}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">3 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Третий курс' %}
+                                    <td class="table-weekdays">
+                                        <a href="{% url 'registration' %}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">4 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Четвертый курс' %}
+                                    <td class="table-weekdays">
+                                        <a href="{% url 'registration' %}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">5 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Пятый курс' %}
+                                    <td class="table-weekdays">
+                                        <a href="{% url 'registration' %}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">6 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Шестой курс' %}
+                                    <td class="table-weekdays">
+                                        <a href="{% url 'registration' %}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                </tbody>
+                            </table>
+                            {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {% else %}
+                <li>
+                    <div class="question" data-accordion="accordion-item-{{ category.ordinal_place }}">
+                        <p class="typography-faq-question">{{ category.name }}</p>
+                        <button class="plus-icon typography-icon-faq">
+                            <span class="open-aria visuallyhidden" aria-hidden="true">Откройте, чтобы увидеть список курсов</span>
+                            <span class="close-aria visuallyhidden">Закрыть</span>
+                        </button>
+                    </div>
+                    <div id="accordion-item-{{ category.ordinal_place }}" class="transition-container"
+                         aria-hidden="true" style="">
+
+                        <div class="answer">
+                            <p class="typography-faq-answer">Для добавления группы в избранное, просто нажмите на
+                                неё.</p>
+                            <style>
+                                .table {
+                                    width: 100%;
+                                    border: 1px solid #e1e1e1;
+                                    margin-bottom: 20px;
+                                    display: inline-block;
+                                }
+
+                                .table tbody {
+                                    display: flex;
+                                }
+
+                                .table tbody th {
+                                    font-weight: bold;
+                                    text-align: center;
+                                    padding: 10px 10px;
+                                    background: #d8d8d8;
+                                    font-size: 14px;
+                                }
+
+                                .table tbody td {
+
+                                    text-align: center;
+                                    padding: 10px 10px;
+                                    font-size: 14px;
+                                    vertical-align: top;
+                                    background: #d8d8d8;
+                                }
+
+                                .table tbody tr {
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex-wrap: wrap;
+                                    width: 100px;
+                                }
+                                .table tbody tr th{
+                                    width: 100px;
+                                }
+                            </style>
+                            <br>
+                            <div class="copy-container" style="border-radius: 5px;">
+                            {% if request.user.is_authenticated %}
+                            <table class="table">
+                                <tbody>
+                                <tr class="table-lesson-numbers in-1">
+                                    <th class="table-lesson-num in-1">1 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Первый курс' %}
+                                    <td class="table-time">
+                                        <a href="{% url 'add_to_cart' slug=product.slug %}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                <tr class="table-lesson-numbers in-2">
+                                    <th class="table-lesson-num in-2">2 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Второй курс' %}
+                                    <td class="table-time">
+                                        <a href="{% url 'add_to_cart' slug=product.slug %}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">3 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Третий курс' %}
+                                    <td class="table-time">
+                                        <a href="{% url 'add_to_cart' slug=product.slug %}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">4 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Четвертый курс' %}
+                                    <td class="table-time">
+                                        <a href="{% url 'add_to_cart' slug=product.slug %}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">5 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Пятый курс' %}
+                                    <td class="table-time">
+                                        <a href="{% url 'add_to_cart' slug=product.slug %}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">6 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Шестой курс' %}
+                                    <td class="table-time">
+                                        <a href="{% url 'add_to_cart' slug=product.slug %}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                </tbody>
+                            </table>
+                            {% else %}
+                            <table class="table">
+                                <tbody>
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">1 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Первый курс' %}
+                                    <td class="table-time">
+                                        <a href="{% url 'registration' %}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">2 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Второй курс' %}
+                                    <td class="table-weekdays">
+                                        <a href="{% url 'registration' %}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">3 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Третий курс' %}
+                                    <td class="table-weekdays">
+                                        <a href="{% url 'registration' %}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">4 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Четвертый курс' %}
+                                    <td class="table-weekdays">
+                                        <a href="{% url 'registration' %}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                {% if 'Пятый курс' in product.fac %}
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">5 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Пятый курс' %}
+                                    <td class="table-weekdays">
+                                        <a href="{% url 'registration' %}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                {% endif %}
+                                {% if 'Шестой курс' in product.fac %}
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">6 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Шестой курс' %}
+                                    <td class="table-weekdays">
+                                        <a href="{% url 'registration' %}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                {% endif %}
+                                {% if 'Седьмой курс' in product.fac %}
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">7 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Седьмой курс' %}
+                                    <td class="table-weekdays">
+                                        <a href="{% url 'registration' %}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                {% endif %}
+                                {% if 'Восьмой курс' in product.fac %}
+                                <tr class="table-lesson-numbers">
+                                    <th class="table-lesson-num">8 курс</th>
+                                    {% for product in products %}
+                                    {% if product.category == category %}
+                                    {% if product.fac == 'Восьмой курс' %}
+                                    <td class="table-weekdays">
+                                        <a href="{% url 'registration' %}">{{ product.title }}</a>
+                                    </td>
+                                    {% endif %}
+                                    {% endif %}
+                                    {% endfor %}
+                                </tr>
+                                {% endif %}
+                                </tbody>
+                            </table>
+                            {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            <br>
+        </div>
+    </section>
+</main>
+<!--/main-->
+{% endblock %}
