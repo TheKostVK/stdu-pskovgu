@@ -1,0 +1,27 @@
+<style>
+    @media screen and (max-width: 600px) {
+        .copy-container {
+            height: 60%;
+            margin-top: 150px;
+            margin-bottom: 100px
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .copy-container {
+            height: 40%;
+            margin-top: 150px;
+            margin-bottom: 100px
+        }
+    }
+</style>
+<div class="copy-container">
+    <h2 class="typography-section-headline plans-headline large-10 medium-12 small-12 center"
+        style="padding-bottom: 30px">
+        Пусто(</h2>
+    <p class="typography-eyebrow large-7 medium-9 small-12 center" style="padding-left: 20px">Список избранных групп пуст. <br>Добавьте первую группу в избранное.</p>
+    <br>
+    <a href="{% url 'list_group' %}" class="button">
+        <span>Список групп</span>
+    </a>
+</div>

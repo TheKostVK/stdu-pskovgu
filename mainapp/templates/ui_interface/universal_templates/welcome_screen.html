@@ -1,0 +1,18 @@
+{% load static %}
+<section class="homepage-section collection-module" data-module-template="heroes" data-analytics-region="hero">
+    <div data-unit-id="1">
+        <div class="module-content">
+            <div class="unit-copy-wrapper">
+                <img style="width: 320px; height: auto;"
+                     src="{% static 'images/pskovgu/logo_blue_pic-removebg-preview.png' %}"
+                     alt="Логотип ПсковГУ">
+                <h3 style="margin-bottom: 10px" class="headline">Расписание «ПсковГУ»</h3>
+                <p class="subsection-performance-headline" style="text-align: center; padding-bottom: 20px;">
+                    Совершенно новое расписание</p>
+                <!--<p class="subhead" style="text-align: center; padding-bottom: 20px;">Для добавления группы в избранное <br>необходимо зарегистрироваться</p>-->
+                <!--<a class="button" href="{% url 'login' %}" aria-label="Авторизация">Авторизация</a>-->
+                <a class="button-main" href="{% url 'registration' %}" aria-label="Регистрация">Регистрация</a>
+            </div>
+        </div>
+    </div>
+</section>

@@ -41,66 +41,14 @@
 </style>
 <main class="main" role="main" data-page-type="overview">
     {% if not request.user.is_authenticated %}
-    <section class="homepage-section collection-module" data-module-template="ribbon">
-        <div data-unit-id="shop-online" data-analytics-activitymap-region-id="ribbon-shop-online">
-            <div class="module-content">
-                <div class="ribbon-shop-online">
-                    <div class="section-content section-content-shop-online">
-                        <span class="shop-ribbon-copy">В настоящее время сайт находится в разработке.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="homepage-section collection-module" data-module-template="heroes"
-             data-analytics-region="hero">
-        <div data-unit-id="1">
-            <div class="module-content">
-                <div class="unit-copy-wrapper">
-                    <!--<h3 class="subhead" role="presentation">Oh. So. Pro.</h3>-->
-                    <img style="width: 320px; height: auto;"
-                         src="{% static 'images/pskovgu/logo_blue_pic-removebg-preview.png' %}"
-                         alt="Логотип ПсковГУ">
-                    <h3 style="margin-bottom: 10px" class="headline">Расписание ПсковГУ</h3>
-                    <a class="button" href="{% url 'registration' %}" aria-label="Регистрация">Регистрация</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% include 'ui_interface/welcome_screen.html' %}
     {% else %}
     <link rel="stylesheet" href="{% static 'list_group/main.built.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'list_group/overview.built.css' %}" type="text/css">
     <link href="{% static 'timetable/css/css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'timetable/css/style.css' %}" rel="stylesheet" type="text/css">
     {% if not cart.products.count %}
-    <style>
-        @media screen and (max-width: 600px) {
-            .copy-container {
-                height: 60%;
-                margin-top: 150px;
-                margin-bottom: 100px
-            }
-        }
-
-        @media screen and (min-width: 1200px) {
-            .copy-container {
-                height: 40%;
-                margin-top: 150px;
-                margin-bottom: 100px
-            }
-        }
-    </style>
-    <div class="copy-container">
-        <h2 class="typography-section-headline plans-headline large-10 medium-12 small-12 center">
-            Избранное</h2>
-        <p class="typography-eyebrow large-7 medium-9 small-12 center">Избранное - это ваш список
-            отслеживаемых групп. Пользоваться
-            очень легко, добавляйте новые или редактируйте уже имеющиеся группы.</p>
-        <br>
-        <a href="{% url 'list_group' %}" class="button">
-            <span>Список групп</span>
-        </a>
-    </div>
+    {% include 'ui_interface/universal_templates/empty_cart.html' %}
     {% else %}
     {% if cart.products.count < 2 %}
     <section class="theme-light" data-anim-scroll-group="Section - Plans"

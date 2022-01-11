@@ -5,8 +5,8 @@ User = get_user_model()
 
 
 class LoginForm(forms.ModelForm):
-    email = forms.CharField(widget=forms.TextInput(attrs={'class': 'force-ltr form-textbox form-textbox-text', 'type':'text', 'id':'email', 'can-field':'accountName', 'autocomplete':'off', 'autocorrect':'off', 'autocapitalize':'off', 'aria-required':'true', 'required':'required', 'spellcheck':'false', 'placeholder':'Почта', 'aria-invalid':'false', 'autofocus':''}))
-    password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-textbox form-textbox-text', 'type':'password', 'id':'password', 'can-field':'password', 'autocomplete':'off', 'autocorrect':'off', 'autocapitalize':'off', 'aria-required':'true', 'required':'required', 'spellcheck':'false', 'placeholder':'Пароль', 'aria-invalid':'false', 'autofocus':''}))
+    email = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'type':'text', 'id':'email', 'can-field':'username', 'autocomplete':'off', 'autocorrect':'off', 'autocapitalize':'off', 'aria-required':'true', 'required':'required', 'spellcheck':'false', 'placeholder':'Почта', 'aria-invalid':'false', 'autofocus':''}))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password', 'id':'password', 'can-field':'password', 'autocomplete':'off', 'autocorrect':'off', 'autocapitalize':'off', 'aria-required':'true', 'required':'required', 'spellcheck':'false', 'placeholder':'Пароль', 'aria-invalid':'false', 'autofocus':''}))
 
     class Meta:
         model = User
@@ -31,9 +31,9 @@ class LoginForm(forms.ModelForm):
 
 class RegistrationForm(forms.ModelForm):
 
-    username = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
-    password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control'}))
-    confirm_password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control'}))
+    username = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'type':'text', 'id':'email', 'can-field':'username', 'autocomplete':'off', 'autocorrect':'off', 'autocapitalize':'off', 'aria-required':'true', 'required':'required', 'spellcheck':'false', 'placeholder':'Почта', 'aria-invalid':'false', 'autofocus':''}))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password', 'id':'password', 'can-field':'password', 'autocomplete':'off', 'autocorrect':'off', 'autocapitalize':'off', 'aria-required':'true', 'required':'required', 'spellcheck':'false', 'placeholder':'Пароль', 'aria-invalid':'false', 'autofocus':''}))
+    confirm_password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password', 'id':'password', 'can-field':'confirm_password', 'autocomplete':'off', 'autocorrect':'off', 'autocapitalize':'off', 'aria-required':'true', 'required':'required', 'spellcheck':'false', 'placeholder':'Подтвердите пароль', 'aria-invalid':'false', 'autofocus':''}))
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

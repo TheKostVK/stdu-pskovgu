@@ -1,49 +1,108 @@
 {% extends 'ui_interface/index.htm' %}
 {% load static %}
-{% load crispy_forms_tags %}
+{% block header %}
+<head>
+    <meta name="robots" content="noindex"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Metadata -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="Новости «ПсковГУ»">
+    <meta name="keywords"
+          content="новости псковгу, расписание пгу, пгу, псковгу, расписание онлайн псковгу, расписание занятий псковгу, преподаватели псковгу, расписание онлайн псковгу">
+    <!-- Stylesheets -->
+    <link type="image/x-icon" rel="shortcut icon" href="{% static '/images/pskovgu/favicon.ico' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/ac/globalnav/7/ru_RU/styles/ac-globalnav.built.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static '/ac/localnav/6/styles/ac-localnav.built.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static '/ac/globalfooter/7/ru_RU/styles/ac-globalfooter.built.css' %}"/>
+    <link rel="stylesheet" href="{% static '/wss/fonts' %}"/>
+    <link rel="stylesheet" href="{% static '/v/home/hi/built/styles/overview.built.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static '/ru/home/styles/overview.css' %}" type="text/css/">
+    <link rel="stylesheet" href="{% static '/v/home/hi/built/styles/main.built.css' %}" type="text/css">
+    <script src="{% static '/v/home/hi/built/scripts/head.built.js' %}" type="text/javascript" charset="utf-8"></script>
+    <title>Новости «ПсковГУ»</title>
+</head>
+{% endblock %}
 {% block content %}
 <div class="ac-gn-blur"></div>
 <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
 <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
 <script type="text/javascript" src="{% static '/ac/globalnav/7/ru_RU/scripts/ac-globalnav.built.js' %}"></script>
-<main id="main" class="main" role="main" data-page-type="overview">
-    <section class="homepage-section collection-module" data-module-template="ribbon">
-        <div data-unit-id="shop-online" data-analytics-activitymap-region-id="ribbon-shop-online">
-            <div class="module-content">
-                <div class="ribbon-shop-online">
-                    <div class="section-content section-content-shop-online">
-                        <span class="shop-ribbon-copy">В настоящее время сайт находится в разработке.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="homepage-section collection-module" data-module-template="heroes" data-analytics-region="hero">
-        <div data-unit-id="1">
-            <div class="module-content">
-                <div class="unit-copy-wrapper">
-                    <img style="width: 350px; height: auto;"
-                         src="{% static 'images/pskovgu/logo_blue_pic-removebg-preview.png'%}" alt="Логотип ПсковГУ">
-                    <h2 class="headline">Раздел "Новости" находится в разработке!</h2>
-                    <!--<h3 class="subhead" role="presentation">Oh. So. Pro.</h3>-->
-                    <a class="button" href="{% url 'base' %}" aria-label="Вернуться на главную">Вернуться на главную</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--<section class="section-hero theme-dark-lite" data-anim-lazy-image>
-        <div class="section-content">
-            <div class="copy-container">
-                <h2 class="headline">Сайт в разработке!</h2>
-                <h3 class="subhead" role="presentation">В настоящее время сайт находиться в стадии разработки.
-                    Зайдите позже или дождитесь открытого бета-тестирования!</h3>
-                <div class="cta-links">
-                    <a class="button control" href="{% url 'registration' %}" target="_self"
-                       aria-label="Смотрите презентацию">Регистрация</a>
-                </div>
-            </div>
-        </div>
-    </section>-->
+<style>
+    @media screen and (max-width: 1160px) {
+        .copy-container {
+            overflow-y: scroll;
+        }
+    }
+
+    @media screen and (min-width: 1750px) {
+        .copy-container {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .updatetext {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 8px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .updatetext {
+            font-size: 12px;
+            text-align: right;
+            margin-top: 10px;
+        }
+    }
+</style>
+<main class="main" role="main" data-page-type="overview">
+    <link rel="stylesheet" href="{% static 'list_group/main.built.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'list_group/overview.built.css' %}" type="text/css">
+    <link href="{% static 'timetable/css/css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'timetable/css/style.css' %}" rel="stylesheet" type="text/css">
+    <style>
+    @media screen and (max-width: 600px) {
+        .copy-container {
+            height: 60%;
+            margin-top: 150px;
+            margin-bottom: 100px
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .copy-container {
+            height: 40%;
+            margin-top: 150px;
+            margin-bottom: 100px
+        }
+    }
+</style>
+    <div class="copy-container">
+        <h2 class="typography-section-headline plans-headline large-10 medium-12 small-12 center"
+            style="padding-bottom: 30px">
+            Пусто(</h2>
+        <p class="typography-eyebrow large-7 medium-9 small-12 center" style="padding-left: 20px">Раздел "Новости"
+            находится в разработке!</p>
+        <br>
+        <a href="{% url 'base' %}" class="button">
+            <span>Вернуться на главную</span>
+        </a>
+    </div>
+    <!--<div data-unit-id="1">
+               <div class="module-content">
+                   <div class="unit-copy-wrapper">
+                       <img style="width: 350px; height: auto;"
+                            src="{% static 'images/pskovgu/logo_blue_pic-removebg-preview.png'%}" alt="Логотип ПсковГУ">
+                       <h2 class="headline">Раздел "Новости" находится в разработке!</h2>
+                       <h3 class="subhead" role="presentation">Oh. So. Pro.</h3>
+                       <a class="button" href="{% url 'base' %}" aria-label="Вернуться на главную">Вернуться на главную</a>
+                   </div>
+               </div>
+           </div>-->
 </main>
-<!--/main-->
 {% endblock %}
