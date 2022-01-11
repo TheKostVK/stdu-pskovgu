@@ -30,9 +30,9 @@
                         {% if item.product.active != 0 %}
                         <div class="plan-tile plan-individual gallery-item fade-in animate will-change"
                              data-component-list="TriggerAnimation">
-                            <h3 class="typography-plan-headline"><a class="typography-plan-headline"
-                                                                    href="{{ item.product.get_absolute_url }}">{{
-                                item.product.title }}</a></h3>
+                            <h3 class="typography-plan-headline">
+                                <a class="typography-plan-headline" href="{{ item.product.get_absolute_url }}">{{ item.product.title }}</a>
+                            </h3>
                             <!--<h3 class="headline-individual typography-plan-headline"></h3>-->
                             <!--<h3 class="headline-premier typography-plan-headline">Premier</h3>-->
                             <div class="keyline keyline-individual"></div>
@@ -72,9 +72,9 @@
                         <div class="plan-tile plan-individual gallery-item fade-in animate will-change"
                              data-component-list="TriggerAnimation">
                             <p class="typography-plan-copy" role="text">Недоступно!</p>
-                            <h3 class="typography-plan-headline"><a class="typography-plan-headline"
-                                                                    href="{% url 'timetable' %}">{{ item.product.title
-                                }}</a></h3>
+                            <h3 class="typography-plan-headline">
+                                <a class="typography-plan-headline" href="{% url 'timetable' %}">{{ item.product.title }}</a>
+                            </h3>
                             <!--<h3 class="headline-individual typography-plan-headline"></h3>-->
                             <!--<h3 class="headline-premier typography-plan-headline">Premier</h3>-->
                             <div class="keyline keyline-individual"></div>
