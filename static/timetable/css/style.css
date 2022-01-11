@@ -212,7 +212,7 @@ h1 {
 
 
 #schedule-table td, #schedule-table th {
-    border: 1px solid transparent;
+    border: 1px solid #e1e1e1;
     text-align: center;
     width: 10%;
 }
@@ -228,6 +228,7 @@ h1 {
 }
 
 .table-lesson-num {
+    width: 130px;
     font-weight: 300;
     font-size: 12pt;
 }
@@ -237,6 +238,7 @@ h1 {
 }
 
 .table-weekdays {
+    height: 100px;
     font-size: 10pt;
 }
 
@@ -257,7 +259,7 @@ h1 {
 }
 
 .table-teacher, .table-room {
-    color: #707070;
+    color: #5d5d5d;
 }
 
 .table-teacher a, .table-room a {
@@ -278,11 +280,15 @@ h1 {
 }
 
 .color-lecture {
-    background: #fcb0c7;
+    background: #beffff;
 }
 
 .color-together {
-    background: #aee1fc;
+    background: #aec0fc;
+}
+
+.color-zach{
+    background: #ffadb7;
 }
 
 .table-empty {
