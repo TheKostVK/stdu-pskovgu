@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <!-- Metadata -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="description" content="Расписание занятий ПсковГУ онлайн для группы {{ product.title }}">
+    <title>Расписание занятий «ПсковГУ» для группы {{ product.title }}</title>
+    <meta name="description" content="Расписание занятий «ПсковГУ» для группы {{ product.title }} на 2021-2022 учебный год."/>
     <meta name="keywords"
-          content="расписание, пгу, псковгу, расписание онлайн, расписание занятий, преподаватели псковгу, расписание онлайн">
+          content="новости псковгу {{ product.title }}, расписание пгу {{ product.title }}, пгу {{ product.title }}, псковгу {{ product.title }}, расписание онлайн псковгу {{ product.title }}, расписание занятий псковгу {{ product.title }}, преподаватели псковгу {{ product.title }}, расписание онлайн псковгу {{ product.title }}">
     <!-- Stylesheets -->
     <link type="image/x-icon" rel="shortcut icon" href="{% static '/images/pskovgu/favicon.ico' %}">
     <link rel="stylesheet" type="text/css" href="{% static '/ac/globalnav/7/ru_RU/styles/ac-globalnav.built.css' %}"/>
@@ -20,13 +21,9 @@
     <link rel="stylesheet" href="{% static '/ru/home/styles/overview.css' %}" type="text/css/">
     <link rel="stylesheet" href="{% static '/v/home/hi/built/styles/main.built.css' %}" type="text/css">
     <script src="{% static '/v/home/hi/built/scripts/head.built.js' %}" type="text/javascript" charset="utf-8"></script>
-    <title>Расписание занятий «ПсковГУ» для группы {{ product.title }}</title>
-    <meta name="description"
-          content="Расписание занятий «ПсковГУ» для группы {{ product.title }} на 2021-2022 учебный год."/>
 </head>
 {% endblock %}
 {% block content %}
-<meta name="robots" content="noindex, nofollow"/>
 <div class="ac-gn-blur"></div>
 <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
 <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
