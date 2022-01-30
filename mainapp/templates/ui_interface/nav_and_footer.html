@@ -6,25 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <!-- Metadata -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="description" content="Расписание занятий «ПсковГУ» для групп на 2021-2022 учебный год."/>
-    <meta name="keywords"
-          content="новости псковгу, расписание пгу, пгу, псковгу, расписание онлайн псковгу, расписание занятий псковгу, преподаватели псковгу, расписание онлайн псковгу">
     <!-- Stylesheets -->
-    <link type="image/x-icon" rel="shortcut icon" href="{% static '/images/pskovgu/favicon.ico' %}">
     <link rel="stylesheet" type="text/css" href="{% static '/ac/globalnav/7/ru_RU/styles/ac-globalnav.built.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static '/ac/localnav/6/styles/ac-localnav.built.css' %}"/>
-    <link rel="stylesheet" type="text/css"
-          href="{% static '/ac/globalfooter/7/ru_RU/styles/ac-globalfooter.built.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static '/ac/globalfooter/7/ru_RU/styles/ac-globalfooter.built.css' %}"/>
     <link rel="stylesheet" href="{% static '/wss/fonts' %}"/>
     <link rel="stylesheet" href="{% static '/v/home/hi/built/styles/overview.built.css' %}" type="text/css"/>
     <link rel="stylesheet" href="{% static '/ru/home/styles/overview.css' %}" type="text/css/">
     <link rel="stylesheet" href="{% static '/v/home/hi/built/styles/main.built.css' %}" type="text/css">
     <script src="{% static '/v/home/hi/built/scripts/head.built.js' %}" type="text/javascript" charset="utf-8"></script>
-    <title>Расписание занятий «ПсковГУ»</title>
+    {% if not request.user.is_authenticated %}
+    <title>thekost</title>
+    <meta name="description" content="thekost"/>
+    {% else %}
+    <title>Расписание ПсковГУ</title>
+    <meta name="description" content="Расписание занятий «ПсковГУ» для групп на 2021-2022 учебный год."/>
+    <link type="image/x-icon" rel="shortcut icon" href="{% static '/images/pskovgu/favicon.ico' %}">
+    {% endif %}
 </head>
 {% endblock %}
 <body class="page-overview ">
-<h1 class="visuallyhidden">Расписание занятий «ПсковГУ»</h1>
 <meta name="ac-gn-store-key"/>
 <aside id="ac-gn-segmentbar" class="ac-gn-segmentbar" lang="ru-RU" dir="ltr"></aside>
 <input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate"/>
@@ -51,9 +52,13 @@
                 </label>
             </li>
             <li class="ac-gn-item ac-gn-apple">
+                {% if not request.user.is_authenticated %}
+
+                {% else %}
                 <a href="{% url 'base' %}">
                     <img class="ac-gn-link" src="{% static 'images/pskovgu/logo_blue.png' %}" id="ac-gn-firstfocus">
                 </a>
+                {% endif %}
             </li>
         </ul>
         <!--
@@ -78,15 +83,17 @@
         </div>-->
         <ul class="ac-gn-list">
             <li class="ac-gn-item ac-gn-apple">
+                {% if not request.user.is_authenticated %}
+
+                {% else %}
                 <a class="ac-gn-link" href="{% url 'base' %}">
                     <img src="{% static 'images/pskovgu/logo_blue.png' %}">
                 </a>
+                {% endif %}
             </li>
-            <!--<li class="ac-gn-item">
-                <a class="ac-gn-link ac-gn-link-support" href="{% url 'timetable' %}">
-                    <span class="ac-gn-link">Расписание</span>
-                </a>
-            </li>-->
+            {% if not request.user.is_authenticated %}
+
+            {% else %}
             <li class="ac-gn-item">
                 <a class="ac-gn-link ac-gn-link-support" href="{% url 'list_group' %}">
                     <span class="ac-gn-link">Список групп</span>
@@ -109,6 +116,7 @@
                    role="button" aria-haspopup="true"></a>
             </li>
             -->
+            {% endif %}
             {% if not request.user.is_authenticated %}
             <li class="ac-gn-item ac-gn-support">
                 <a class="ac-gn-link ac-gn-link-support" href="{% url 'login' %}">
@@ -250,12 +258,13 @@
     <div><img src="https://mc.yandex.ru/watch/86284905" style="position:absolute; left:-9999px;" alt=""/></div>
 </noscript>
 <!-- /Yandex.Metrika counter -->
-<footer id="ac-globalfooter" class="no-js ac-globalfooter-dark" lang="ru-RU" dir="ltr"
-        role="contentinfo" aria-labelledby="ac-gf-label">
+<footer id="ac-globalfooter" class="no-js ac-globalfooter-dark" lang="ru-RU" dir="ltr" role="contentinfo" aria-labelledby="ac-gf-label">
     <div class="ac-gf-content">
-        <h2 class="ac-gf-label" id="ac-gf-label">Нижний колонтитул ПсковГУ</h2>
         <nav class="ac-gf-directory with-5-columns" aria-label="Службы каталогов" role="navigation">
             <!--googleoff: all-->
+            {% if not request.user.is_authenticated %}
+
+            {% else %}
             <div class="ac-gf-directory-column">
                 <input class="ac-gf-directory-column-section-state" type="checkbox"
                        id="ac-gf-directory-column-section-state-products"/>
@@ -299,9 +308,6 @@
                     <ul class="ac-gf-directory-column-section-list">
                         <li class="ac-gf-directory-column-section-item">
                             <a class="ac-gf-directory-column-section-link" href="{% url 'list_group' %}">Список групп</a>
-                        </li>
-                        <li class="ac-gf-directory-column-section-item">
-                            <a class="ac-gf-directory-column-section-link" href="{% url 'timetable' %}">Расписание</a>
                         </li>
                         <li class="ac-gf-directory-column-section-item">
                             <a class="ac-gf-directory-column-section-link" href="{% url 'news' %}">Новости</a>
@@ -388,14 +394,10 @@
                        id="ac-gf-directory-column-section-state-about"/>
             </div>
             <!--googleon: all-->
+            {% endif %}
         </nav>
-
         <section class="ac-gf-footer">
             <div class="ac-gf-footer-shop" x-ms-format-detection="none">
-                Это НЕОФИЦИАЛЬНОЕ расписание является студенческим проектом и не претендует на то, чтобы заменить официальное.
-                <!--
-                По возможным вопросам, связанным с расписанием учебных занятий писать на почту
-                <a href="mailto:displt@pskgu.ru" class="nowrap">displt@pskgu.ru</a>-->
             </div>
             <div class="ac-gf-footer-locale">
                 <div class="ac-gf-footer-locale-link"
@@ -404,8 +406,6 @@
             </div>
             <div class="ac-gf-footer-legal">
                 <div class="ac-gf-footer-legal-copyright">TheKost_ 2022 г. | v1.0.3
-                </div>
-                <div class="ac-gf-footer-legal-copyright">Проект студентов «ПсковГУ» группы 0431-06
                 </div>
             </div>
         </section>

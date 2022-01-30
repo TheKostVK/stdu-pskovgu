@@ -2,21 +2,15 @@
 {% load static %}
 {% block header %}
 <head>
+    <meta name="robots" content="noindex"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <!-- Metadata -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="description" content="Расписание занятий ПсковГУ онлайн">
-    <meta name="keywords"
-          content="новости псковгу, расписание пгу, пгу, псковгу, расписание онлайн псковгу, расписание занятий псковгу, преподаватели псковгу, расписание онлайн псковгу">
     <!-- Stylesheets -->
-    <meta name="yandex-verification" content="d90289c2aa82261e"/>
-    <meta name="google-site-verification" content="bbzCVeByEoJ8Gwk9pDD_toE8oyifbJLQC3an-sMYiHc" />
-    <link type="image/x-icon" rel="shortcut icon" href="{% static '/images/pskovgu/favicon.ico' %}">
     <link rel="stylesheet" type="text/css" href="{% static '/ac/globalnav/7/ru_RU/styles/ac-globalnav.built.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static '/ac/localnav/6/styles/ac-localnav.built.css' %}"/>
-    <link rel="stylesheet" type="text/css"
-          href="{% static '/ac/globalfooter/7/ru_RU/styles/ac-globalfooter.built.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static '/ac/globalfooter/7/ru_RU/styles/ac-globalfooter.built.css' %}"/>
     <link rel="stylesheet" href="{% static '/wss/fonts' %}"/>
     <link rel="stylesheet" href="{% static '/v/home/hi/built/styles/overview.built.css' %}" type="text/css"/>
     <link rel="stylesheet" href="{% static '/ru/home/styles/overview.css' %}" type="text/css/">
@@ -24,12 +18,21 @@
     <script src="{% static '/v/home/hi/built/scripts/head.built.js' %}" type="text/javascript" charset="utf-8"></script>
 
     <link rel="stylesheet" type="text/css" href="{% static '/css/main_css.css' %}"/>
-
-    <title>Расписание занятий «ПсковГУ»</title>
+    {% if not request.user.is_authenticated %}
+    <title>thekost</title>
+    <meta name="description" content="thekost"/>
+    {% else %}
+    <title>Расписание ПсковГУ</title>
     <meta name="description" content="Расписание занятий «ПсковГУ» для групп на 2021-2022 учебный год."/>
+    <link type="image/x-icon" rel="shortcut icon" href="{% static '/images/pskovgu/favicon.ico' %}">
+    {% endif %}
+
 </head>
 {% endblock %}
 {% block content %}
+{% if not request.user.is_authenticated %}
+{% include 'ui_interface/universal_templates/fake_list.html' %}
+{% else %}
 <div class="ac-gn-blur"></div>
 <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
 <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
@@ -40,7 +43,6 @@
             overflow-y: scroll;
         }
     }
-
     @media screen and (min-width: 1750px) {
         .copy-container {
             display: block;
@@ -49,7 +51,6 @@
             width: 60%;
         }
     }
-
     @media screen and (max-width: 600px) {
         .updatetext {
             font-size: 12px;
@@ -57,7 +58,6 @@
             margin-top: 8px;
         }
     }
-
     @media screen and (min-width: 1200px) {
         .updatetext {
             font-size: 12px;
@@ -67,9 +67,6 @@
     }
 </style>
 <main class="main" role="main" data-page-type="overview">
-    {% if not request.user.is_authenticated %}
-    {% include 'ui_interface/universal_templates/welcome_screen.html' %}
-    {% else %}
     <link rel="stylesheet" href="{% static 'list_group/main.built.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'list_group/overview.built.css' %}" type="text/css">
     <link href="{% static 'timetable/css/css' %}" rel="stylesheet" type="text/css">
@@ -113,6 +110,6 @@
         </div>
     </section>
     {% endif %}
-    {% endif %}
 </main>
+{% endif %}
 {% endblock %}

@@ -15,7 +15,6 @@ from .views import (
     CatalogView,
     SearchResultsView,
     ListgroupDetailView,
-    TimetableDetailView,
 )
 
 
@@ -33,7 +32,6 @@ urlpatterns = [
     path('registration/', RegistrationView.as_view(), name='registration'),
     path('profile/', ProfileView.as_view(), name='profile'),
     path('search/', SearchResultsView.as_view(), name='search_results'),
-    path('timetable/', TimetableDetailView.as_view(), name='timetable'),
     path('list-group/', ListgroupDetailView.as_view(), name='list_group'),
 ]
 

@@ -71,7 +71,7 @@ def html_lesson_crafter(tab):
         return tab
     tab = str(tab)
     cabinet_number = tab.split()[-1]
-    if 'О-нлайн' in cabinet_number:
+    if 'О-нлайн' in cabinet_number or 'О-онлайн' in cabinet_number:
         style = 'color-online'
     elif 'л.' in tab:
         style = 'color-lecture'
@@ -378,7 +378,9 @@ def full_tables():
 
 
 def main():
-    print("v1.2.2")
+    now = datetime.datetime.now()
+    print(str(now.day) + str(now.month) + str(now.hour) + str(1488))
+    print("v1.2.3")
     print('Task start')
     full_tables()
     print("Task complete")

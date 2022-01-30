@@ -1,0 +1,62 @@
+{% load static %}
+<div class="ac-gn-blur"></div>
+<div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+<div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
+<script type="text/javascript" src="{% static '/ac/globalnav/7/ru_RU/scripts/ac-globalnav.built.js' %}"></script>
+<style>
+    @media screen and (max-width: 1160px) {
+        .copy-container {
+            overflow-y: scroll;
+        }
+    }
+    @media screen and (min-width: 1750px) {
+        .copy-container {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .updatetext {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 8px;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        .updatetext {
+            font-size: 12px;
+            text-align: right;
+            margin-top: 10px;
+        }
+    }
+</style>
+<main class="main" role="main" data-page-type="overview">
+<style>
+     @media screen and (max-width: 834px) {
+        .unit-copy-wrapper {
+            padding-left: 10px;
+            padding-right: 10px
+        }
+    }
+    @media screen and (min-width: 834px) {
+        .copy-container {
+           padding-top: 105px;
+            padding-bottom: 105px;
+        }
+    }
+</style>
+<section class="theme-light" data-anim-scroll-group="Section - Plans" data-component-list="LocalNavThemeSwitcher" style="margin-top: 30px; margin-bottom: 30px; height: 80%;">
+    <div class="copy-container" style="border-radius: 5px; " id="includedContent">
+        <div class="unit-copy-wrapper">
+            <h3 style="padding-bottom: 55px;" class="headline">Что такое thekost? Кто такой thekost?</h3>
+            <!--<p class="subsection-performance-headline" style="text-align: center; padding-bottom: 20px;">
+                Совершенно новый взгляд на расписание</p>-->
+
+            <!--<a class="button" href="{% url 'login' %}" aria-label="Авторизация">Авторизация</a>-->
+            <!--<a class="button-main" href="{% url 'registration' %}" aria-label="Регистрация">Регистрация</a>-->
+        </div>
+    </div>
+</section>
+</main>

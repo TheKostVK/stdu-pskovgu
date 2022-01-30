@@ -1,5 +1,6 @@
 from django import forms
 from django.contrib.auth import get_user_model
+import datetime
 
 User = get_user_model()
 
@@ -34,12 +35,14 @@ class RegistrationForm(forms.ModelForm):
     username = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'type':'text', 'id':'email', 'can-field':'username', 'autocomplete':'off', 'autocorrect':'off', 'autocapitalize':'off', 'aria-required':'true', 'required':'required', 'spellcheck':'false', 'placeholder':'Почта', 'aria-invalid':'false', 'autofocus':''}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password', 'id':'password', 'can-field':'password', 'autocomplete':'off', 'autocorrect':'off', 'autocapitalize':'off', 'aria-required':'true', 'required':'required', 'spellcheck':'false', 'placeholder':'Пароль', 'aria-invalid':'false', 'autofocus':''}))
     confirm_password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password', 'id':'password', 'can-field':'confirm_password', 'autocomplete':'off', 'autocorrect':'off', 'autocapitalize':'off', 'aria-required':'true', 'required':'required', 'spellcheck':'false', 'placeholder':'Подтвердите пароль', 'aria-invalid':'false', 'autofocus':''}))
+    invitation_code = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'type': 'text', 'id': 'password', 'can-field': 'invitation code', 'autocomplete': 'off', 'autocorrect': 'off', 'autocapitalize': 'off', 'aria-required': 'true','required': 'required', 'spellcheck': 'false', 'placeholder': 'Код - приглашение','aria-invalid': 'false', 'autofocus': ''}))
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['username'].label = ''
         self.fields['password'].label = ''
         self.fields['confirm_password'].label = ''
+        self.fields['invitation_code'].label = ''
 
     def clean_username(self):
         username = self.cleaned_data['username']
@@ -60,8 +63,18 @@ class RegistrationForm(forms.ModelForm):
             raise forms.ValidationError('Пароли не совпадают')
         return self.cleaned_data
 
+    def check_invite_code(self):
+        invitation_code = self.cleaned_data['invitation_code']
+        now = datetime.datetime.now()
+        invitation_code_today = str(now.day) + str(now.month) + str(now.hour)
+        print(invitation_code_today)
+        print(invitation_code)
+        if int(invitation_code) != int(invitation_code_today):
+            raise forms.ValidationError('Код недействителен')
+        return self.cleaned_data
+
     class Meta:
         model = User
-        fields = ['username', 'password', 'confirm_password']
+        fields = ['username', 'password', 'confirm_password', 'invitation_code']
 
 

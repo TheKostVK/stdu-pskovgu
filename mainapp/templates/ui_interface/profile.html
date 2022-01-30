@@ -9,11 +9,7 @@
         <!-- Metadata -->
 
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <meta name="description" content="Профиль пользователя">
-        <meta name="keywords"
-              content="расписание, пгу, псковгу, расписание онлайн, расписание занятий, преподаватели псковгу, расписание онлайн">
         <!-- Stylesheets -->
-        <link type="image/x-icon" rel="shortcut icon" href="{% static '/images/pskovgu/favicon.ico' %}">
         <link rel="stylesheet" type="text/css"
               href="{% static '/ac/globalnav/7/ru_RU/styles/ac-globalnav.built.css' %}"/>
         <link rel="stylesheet" type="text/css" href="{% static '/ac/localnav/6/styles/ac-localnav.built.css' %}"/>
@@ -25,11 +21,20 @@
         <link rel="stylesheet" href="{% static '/ac/css/account.css' %}" media="screen, print">
         <script src="{% static '/v/home/hi/built/scripts/head.built.js' %}" type="text/javascript"
                 charset="utf-8"></script>
+        {% if not request.user.is_authenticated %}
+        <title>thekost</title>
+        <meta name="description" content="thekost"/>
+        {% else %}
         <title>Профиль пользователя</title>
         <meta name="description" content="Профиль пользователя на сайте с расписанием занятий «ПсковГУ» для групп на 2021-2022 учебный год."/>
+        <link type="image/x-icon" rel="shortcut icon" href="{% static '/images/pskovgu/favicon.ico' %}">
+        {% endif %}
     </head>
 {% endblock %}
 {% block content %}
+{% if not request.user.is_authenticated %}
+<meta http-equiv="refresh" content="0; url=https://stdu-pskovgu.ru/" />
+{% else %}
 <div class="ac-gn-blur"></div>
 <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
 <div id="ac-gn-placeholder" class="ac-nav-placeholder" style="margin-top: 10px"></div>
@@ -135,4 +140,5 @@
         </div>
     </section>-->
 </main>
+{% endif %}
 {% endblock %}

@@ -2,14 +2,17 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
-<meta name="robots" content="noindex, nofollow"/>
+{% if not request.user.is_authenticated %}
+{% include 'ui_interface/universal_templates/fake_list.html' %}
+{% else %}
 <div class="ac-gn-blur"></div>
+<meta name="robots" content="noindex"/>
 <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
 <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
 <script type="text/javascript" src="{% static '/ac/globalnav/7/ru_RU/scripts/ac-globalnav.built.js' %}"></script>
 <main id="main" class="main" role="main" data-page-type="overview">
     <section class="homepage-section collection-module" data-module-template="ribbon">
-        <div data-unit-id="shop-online" data-analytics-activitymap-region-id="ribbon-shop-online">
+        <div data-unit-id="shop-online">
             <div class="module-content">
                 <div class="ribbon-shop-online">
                     <div class="section-content section-content-shop-online">
@@ -20,18 +23,14 @@
         </div>
     </section>
     <section class="homepage-section collection-module" data-module-template="promos">
-
         <div data-unit-id="iphone-13">
             <div class="module-content">
-
                 <div class="unit-wrapper theme-dark center-copy-wrapper">
                     <a class="unit-link" href=""
                         aria-hidden="true" tabindex="-1"></a>
                     <div class="unit-copy-wrapper">
-
                         <h4 class="headline">Аккаунт</h4>
                         <h5 class="subhead" role="presentation">Забыли ID или пароль?</h5>
-
                         <div class="cta-links">
                             <a class="icon icon-after icon-chevronright" href="" aria-label="Подробнее">Настройки</a>
                         </div>
@@ -65,7 +64,6 @@
         </div>
         <div data-unit-id="macbook-pro">
             <div class="module-content">
-
                 <div class="unit-wrapper no-avail center-copy-wrapper">
                     <a class="unit-link" href=""
                         aria-hidden="true" tabindex="-1"></a>
@@ -107,4 +105,5 @@
     </section>
 </main>
 <!--/main-->
+{% endif %}
 {% endblock %}

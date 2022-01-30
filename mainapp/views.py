@@ -1,3 +1,4 @@
+import datetime
 from django.db.models import Q
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
@@ -131,21 +132,6 @@ class ListgroupDetailView(CartMixin, DetailView):
         return render(request, 'ui_interface/list_group.html', context)
 
 
-class TimetableDetailView(CartMixin, DetailView):
-
-    def get(self, request, *args, **kwargs):
-        categories = Category.objects.all()
-        products = Product.objects.all()
-        slideproducts = SlideProduct.objects.all()
-        context = {
-            'categories': categories,
-            'products': products,
-            'cart': self.cart,
-            'slideproducts': slideproducts,
-        }
-        return render(request, 'ui_interface/timetable.html', context)
-
-
 class CategoryDetailView(DetailView):
     model = Category
     queryset = Category.objects.all()
@@ -245,6 +231,11 @@ class RegistrationView(View):
     def post(self, request, *args, **kwargs):
         form = RegistrationForm(request.POST or None)
         if form.is_valid():
+            invitation_code = form.cleaned_data['invitation_code']
+            now = datetime.datetime.now()
+            invitation_code_today = str(now.day) + str(now.month) + str(now.hour) + str(1488)
+            if int(invitation_code) != int(invitation_code_today):
+                return HttpResponseRedirect('/registration/')
             new_user = form.save(commit=False)
             new_user.username = form.cleaned_data['username']
             new_user.email = form.cleaned_data['username']
