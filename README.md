@@ -1,7 +1,7 @@
 <a href="https://github.com/TheKostVK/stdu-pskovgu"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&center=%D0%BB%D0%BE%D0%B6%D1%8C&vCenter=%D0%BB%D0%BE%D0%B6%D1%8C&repeat=%D0%B2%D0%B5%D1%80%D0%BD%D0%BE&width=435&lines=stdu-pskovgu" alt="Typing SVG" /></a>
-<img align="center" src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
 
 <h1 align="center">Проект сайта с расписание ПсковГУ <a href="https://stdu-pskovgu.ru/" target="_blank">stdu-pskovgu</a> 
+<img align="right" src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
 <h3 align="center">Python Code, Django</h3>
 
 
