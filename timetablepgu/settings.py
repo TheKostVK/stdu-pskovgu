@@ -87,9 +87,9 @@ DATABASES = {
 # DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.mysql',
-#        'NAME': 'u1392505_stdu-pskovgu2',
-#        'USER': 'u1392505_stdu',
-#        'PASSWORD': 'bE4yI8iI8epT1m',
+#        'NAME': '',
+#        'USER': '',
+#        'PASSWORD': '',
 #        'HOST': 'localhost',
 #    }
 # }
