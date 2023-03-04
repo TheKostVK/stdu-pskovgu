@@ -5,20 +5,20 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
-version_script = "v2.0.2"
+version_script = "v2.0.0"
 
 
 def get_weekdays_numb(p):
     p -= 1
-    WEEK = 34 + p
-    if WEEK >= 52:
-        WEEK = WEEK - 52
+    week = 34 + p
+    if week >= 52:
+        week = week - 52
         now = datetime.datetime.now()
         year = now.strftime("%Y")
     else:
         now = datetime.datetime.now()
         year = str(int(now.strftime("%Y")) - 1)
-    startdate = time.asctime(time.strptime(f'{year} %d 0' % WEEK, '%Y %W %w'))
+    startdate = time.asctime(time.strptime(f'{year} %d 0' % week, '%Y %W %w'))
     startdate = datetime.datetime.strptime(startdate, '%a %b %d %H:%M:%S %Y')
     dates = [startdate.strftime('%d.%m.%Y')]
     for i in range(1, 7):
@@ -215,7 +215,7 @@ def full_tables():
 
     # Вычисление номера недели
     now = datetime.datetime.now()
-    a = ("2022-02-07")
+    a = ("2023-02-06")
     b = now.strftime("%Y-%m-%d")
     a = a.split('-')
     b = b.split('-')
@@ -225,36 +225,25 @@ def full_tables():
     dd = str(cc)
     dd = -1 * int(dd.split()[0]) // 7 + 1
 
+    r = requests.get(url="https://rasp.pskgu.ru/stud.html", headers=headers)
+    r.encoding = 'utf-8'
+
+    soup = BeautifulSoup(r.content, "lxml")
+
+    articles_card = soup.find_all("a", class_="btn btn-primary")
+
+    mass_inst_url = []
+    mass_inst = []
+    for item in articles_card:
+        mass_inst_url.append(item.get("href", "-"))
+        mass_inst.append(item.get_text())
+
     # Перебор карт факультетов
-    while count_rest < 9:
-        if count_rest == 1:
-            print('\nИнститут инженерных наук')
-            url = "http://rasp.pskgu.ru/instO6.html"
-        elif count_rest == 2:
-            print('\nИнститут образования и социальных наук')
-            url = "http://rasp.pskgu.ru/instO2.html"
-        elif count_rest == 3:
-            print('\nИнститут медицины и экспериментальной биологии')
-            url = "http://rasp.pskgu.ru/instO3.html"
-        elif count_rest == 4:
-            print('\nИнститут гуманитарных наук и языковых коммуникаций')
-            url = "http://rasp.pskgu.ru/instO4.html"
-        elif count_rest == 5:
-            print('\nИнститут математического моделирования и игропрактики')
-            url = "http://rasp.pskgu.ru/instO5.html"
-        elif count_rest == 6:
-            print('\nИнститут права, экономики и управления')
-            url = "http://rasp.pskgu.ru/instO1.html"
-        elif count_rest == 7:
-            print('\nНулевая группа')
-            url = "http://rasp.pskgu.ru/instO8.html"
-        elif count_rest == 8:
-            print('\nИностранные студенты')
-            url = "http://rasp.pskgu.ru/instO7.html"
+    for item in mass_inst_url:
+        url = f"http://rasp.pskgu.ru/{item}"
         r = requests.get(url=url, headers=headers)
         r.encoding = 'utf-8'
-
-        soup = BeautifulSoup(r.text, "lxml")
+        soup = BeautifulSoup(r.content, "lxml")
 
         articles_card = soup.find_all("td")
 
@@ -405,14 +394,10 @@ def full_tables():
     print('\nВсего групп: ' + str(total_groups))
 
 
-def main():
+if __name__ == '__main__':
     print('\n' + version_script)
     print('\nTask start')
     full_tables()
     now = datetime.datetime.now()
-    print('\nCode: ' + str(now.day) + str(now.month) + str(now.hour) + str(1488))
+    print('\n InviteCode: ' + str(now.day) + str(now.month) + str(now.hour) + str(1488))
     print("\nTask complete")
-
-
-if __name__ == '__main__':
-    main()
