@@ -3,6 +3,7 @@
 /passenger_wsgi.py
 /db.sqlite3
 /mainapp/templates/test_interface
+/.idea
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
