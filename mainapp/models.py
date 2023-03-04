@@ -15,7 +15,6 @@ User = get_user_model()
 
 
 class Category(models.Model):
-
     name = models.CharField(max_length=255, verbose_name='Название факультета')
     ordinal_place = models.CharField(max_length=255, verbose_name='Порядковое место в списке факультетов', default=1)
     slug = models.SlugField(unique=True)
@@ -32,7 +31,6 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-
     category = models.ForeignKey(Category, verbose_name='Факультет', on_delete=models.CASCADE)
 
     active = models.BooleanField(default=True, verbose_name='Активировать')
@@ -41,7 +39,10 @@ class Product(models.Model):
     url_table = models.CharField(max_length=255, verbose_name='url', default='ui_interface/tables/.html')
     url_all_tables = models.CharField(max_length=255, verbose_name='url', default='ui_interface/full_tables/f.html')
     slug = models.SlugField(unique=True, blank=True, verbose_name='Номер группы для URL поиска')
-    fac = models.CharField(verbose_name='Курс', max_length=20, choices=[('Первый курс', '1'), ('Второй курс', '2'), ('Третий курс', '3'), ('Четвертый курс', '4'), ('Пятый курс', '5'), ('Шестой курс', '6'), ('Седьмой курс', '7'), ('Восьмой курс', '8')])
+    fac = models.CharField(verbose_name='Курс', max_length=20,
+                           choices=[('Первый курс', '1'), ('Второй курс', '2'), ('Третий курс', '3'),
+                                    ('Четвертый курс', '4'), ('Пятый курс', '5'), ('Шестой курс', '6'),
+                                    ('Седьмой курс', '7'), ('Восьмой курс', '8')])
     price = models.CharField(max_length=255, verbose_name='Условная единица', default=10)
     old_price = models.CharField(max_length=255, verbose_name='Условная единица', default=1)
 
@@ -70,7 +71,6 @@ class Product(models.Model):
 
 
 class SlideProduct(models.Model):
-
     product = models.ForeignKey(Product, verbose_name='Товар', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='/images/banners'.strip('/'), verbose_name='Изображение')
 
@@ -89,9 +89,9 @@ class SlideProduct(models.Model):
 
 
 class CartProduct(models.Model):
-
     user = models.ForeignKey('Customer', verbose_name='Пользователь', on_delete=models.CASCADE)
-    cart = models.ForeignKey('Cart', verbose_name='Отслеживаемое', on_delete=models.CASCADE, related_name='related_products')
+    cart = models.ForeignKey('Cart', verbose_name='Отслеживаемое', on_delete=models.CASCADE,
+                             related_name='related_products')
     product = models.ForeignKey(Product, verbose_name='Расписание', on_delete=models.CASCADE)
     qty = models.PositiveIntegerField(default=1)
 
@@ -107,7 +107,6 @@ class CartProduct(models.Model):
 
 
 class Cart(models.Model):
-
     owner = models.ForeignKey('Customer', null=True, verbose_name='Пользователь', on_delete=models.CASCADE)
     products = models.ManyToManyField(CartProduct, blank=True, related_name='related_cart')
     total_products = models.PositiveIntegerField(default=0, verbose_name='всего расписаний')
@@ -123,7 +122,6 @@ class Cart(models.Model):
 
 
 class Customer(models.Model):
-
     user = models.ForeignKey(User, verbose_name='Пользователь', on_delete=models.CASCADE)
 
     def __str__(self):

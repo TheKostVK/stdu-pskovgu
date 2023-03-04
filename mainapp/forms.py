@@ -6,8 +6,15 @@ User = get_user_model()
 
 
 class LoginForm(forms.ModelForm):
-    email = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'type':'text', 'id':'email', 'can-field':'username', 'autocomplete':'off', 'autocorrect':'off', 'autocapitalize':'off', 'aria-required':'true', 'required':'required', 'spellcheck':'false', 'placeholder':'Почта', 'aria-invalid':'false', 'autofocus':''}))
-    password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password', 'id':'password', 'can-field':'password', 'autocomplete':'off', 'autocorrect':'off', 'autocapitalize':'off', 'aria-required':'true', 'required':'required', 'spellcheck':'false', 'placeholder':'Пароль', 'aria-invalid':'false', 'autofocus':''}))
+    email = forms.CharField(widget=forms.TextInput(
+        attrs={'class': 'form-control', 'type': 'text', 'id': 'email', 'can-field': 'username', 'autocomplete': 'off',
+               'autocorrect': 'off', 'autocapitalize': 'off', 'aria-required': 'true', 'required': 'required',
+               'spellcheck': 'false', 'placeholder': 'Почта', 'aria-invalid': 'false', 'autofocus': ''}))
+    password = forms.CharField(widget=forms.PasswordInput(
+        attrs={'class': 'form-control', 'type': 'password', 'id': 'password', 'can-field': 'password',
+               'autocomplete': 'off', 'autocorrect': 'off', 'autocapitalize': 'off', 'aria-required': 'true',
+               'required': 'required', 'spellcheck': 'false', 'placeholder': 'Пароль', 'aria-invalid': 'false',
+               'autofocus': ''}))
 
     class Meta:
         model = User
@@ -21,21 +28,35 @@ class LoginForm(forms.ModelForm):
     def clean(self):
         email = self.cleaned_data['email']
         password = self.cleaned_data['password']
-        if not User.objects.filter(email=email).exists():
-            raise forms.ValidationError(f'Пользователь "{email}" не найден или неверный пароль')
-        user = User.objects.filter(email=email).first()
-        if user:
-            if not user.check_password(password):
-                raise forms.ValidationError(f'Пользователь "{email}" не найден или неверный пароль')
+        try:
+            user = User.objects.get(email=email)
+        except User.DoesNotExist:
+            raise forms.ValidationError('Пользователь "{email}" не найден или неверный пароль')
+        if not user.check_password(password):
+            raise forms.ValidationError('Пользователь "{email}" не найден или неверный пароль')
         return self.cleaned_data
 
 
 class RegistrationForm(forms.ModelForm):
-
-    username = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'type':'text', 'id':'email', 'can-field':'username', 'autocomplete':'off', 'autocorrect':'off', 'autocapitalize':'off', 'aria-required':'true', 'required':'required', 'spellcheck':'false', 'placeholder':'Почта', 'aria-invalid':'false', 'autofocus':''}))
-    password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password', 'id':'password', 'can-field':'password', 'autocomplete':'off', 'autocorrect':'off', 'autocapitalize':'off', 'aria-required':'true', 'required':'required', 'spellcheck':'false', 'placeholder':'Пароль', 'aria-invalid':'false', 'autofocus':''}))
-    confirm_password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password', 'id':'password', 'can-field':'confirm_password', 'autocomplete':'off', 'autocorrect':'off', 'autocapitalize':'off', 'aria-required':'true', 'required':'required', 'spellcheck':'false', 'placeholder':'Подтвердите пароль', 'aria-invalid':'false', 'autofocus':''}))
-    invitation_code = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'type': 'text', 'id': 'password', 'can-field': 'invitation code', 'autocomplete': 'off', 'autocorrect': 'off', 'autocapitalize': 'off', 'aria-required': 'true','required': 'required', 'spellcheck': 'false', 'placeholder': 'Код - приглашение','aria-invalid': 'false', 'autofocus': ''}))
+    username = forms.CharField(widget=forms.TextInput(
+        attrs={'class': 'form-control', 'type': 'text', 'id': 'email', 'can-field': 'username', 'autocomplete': 'off',
+               'autocorrect': 'off', 'autocapitalize': 'off', 'aria-required': 'true', 'required': 'required',
+               'spellcheck': 'false', 'placeholder': 'Почта', 'aria-invalid': 'false', 'autofocus': ''}))
+    password = forms.CharField(widget=forms.PasswordInput(
+        attrs={'class': 'form-control', 'type': 'password', 'id': 'password', 'can-field': 'password',
+               'autocomplete': 'off', 'autocorrect': 'off', 'autocapitalize': 'off', 'aria-required': 'true',
+               'required': 'required', 'spellcheck': 'false', 'placeholder': 'Пароль', 'aria-invalid': 'false',
+               'autofocus': ''}))
+    confirm_password = forms.CharField(widget=forms.PasswordInput(
+        attrs={'class': 'form-control', 'type': 'password', 'id': 'password', 'can-field': 'confirm_password',
+               'autocomplete': 'off', 'autocorrect': 'off', 'autocapitalize': 'off', 'aria-required': 'true',
+               'required': 'required', 'spellcheck': 'false', 'placeholder': 'Подтвердите пароль',
+               'aria-invalid': 'false', 'autofocus': ''}))
+    invitation_code = forms.CharField(widget=forms.TextInput(
+        attrs={'class': 'form-control', 'type': 'text', 'id': 'password', 'can-field': 'invitation code',
+               'autocomplete': 'off', 'autocorrect': 'off', 'autocapitalize': 'off', 'aria-required': 'true',
+               'required': 'required', 'spellcheck': 'false', 'placeholder': 'Код - приглашение',
+               'aria-invalid': 'false', 'autofocus': ''}))
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -47,10 +68,6 @@ class RegistrationForm(forms.ModelForm):
     def clean_username(self):
         username = self.cleaned_data['username']
         if User.objects.filter(username=username).exists():
-            raise forms.ValidationError(
-                f'Данный почтовый адрес уже зарегистрирован'
-            )
-        if User.objects.filter(email=username).exists():
             raise forms.ValidationError(
                 f'Данный почтовый адрес уже зарегистрирован'
             )
@@ -67,8 +84,6 @@ class RegistrationForm(forms.ModelForm):
         invitation_code = self.cleaned_data['invitation_code']
         now = datetime.datetime.now()
         invitation_code_today = str(now.day) + str(now.month) + str(now.hour)
-        print(invitation_code_today)
-        print(invitation_code)
         if int(invitation_code) != int(invitation_code_today):
             raise forms.ValidationError('Код недействителен')
         return self.cleaned_data
@@ -76,5 +91,3 @@ class RegistrationForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['username', 'password', 'confirm_password', 'invitation_code']
-
-

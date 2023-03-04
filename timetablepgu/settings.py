@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import pytz
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,7 @@ SECRET_KEY = 'lm@6f4crv9h9ioa-0deh*pe%*1u6#__tqpzp2g1qo2kw2iyzhn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []#  'stdu-pskovgu.ru', 'www.stdu-pskovgu.ru']
+ALLOWED_HOSTS = []  # 'stdu-pskovgu.ru', 'www.stdu-pskovgu.ru']
 
 
 # Application definition
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mainapp',
     'specs',
+    'news',
     'django.contrib.sites',
     'crispy_forms',
 ]
@@ -87,9 +89,9 @@ DATABASES = {
 # DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.mysql',
-#        'NAME': '',
-#        'USER': '',
-#        'PASSWORD': '',
+#        'NAME': '*',
+#        'USER': '*',
+#        'PASSWORD': '*',
 #        'HOST': 'localhost',
 #    }
 # }
@@ -117,7 +119,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
+MOSCOW_TZ = pytz.timezone(TIME_ZONE)
+
+USE_TZ = True
 
 USE_I18N = True
 

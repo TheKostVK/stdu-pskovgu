@@ -100,7 +100,7 @@ class CatalogView(DetailView):
             'categories': categories,
             'products': products,
         }
-        return render(request, 'ui_interface/catalog.html', context)
+        return render(request, 'ui_interface/templates/test_interface/catalog.html', context)
 
 
 class ProductDetailView(CartMixin, DetailView):
@@ -136,7 +136,7 @@ class CategoryDetailView(DetailView):
     model = Category
     queryset = Category.objects.all()
     context_object_name = 'category'
-    template_name = 'ui_interface/category_detail.html'
+    template_name = 'ui_interface/templates/test_interface/category_detail.html'
     slug_url_kwarg = 'slug'
 
     def get_context_data(self, **kwargs):
@@ -270,7 +270,7 @@ class ProfileView(CartMixin, View):
 
 class SearchResultsView(ListView):
     model = Product
-    template_name = 'ui_interface/search_results.html'
+    template_name = 'ui_interface/templates/test_interface/search_results.html'
 
     def get_queryset(self):
         query = self.request.GET.get('q')

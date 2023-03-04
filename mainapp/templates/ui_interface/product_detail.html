@@ -3,7 +3,7 @@
 {% block header %}
 <head>
 
-    <meta name="robots" content="noindex, nofollow" />
+    <meta name="robots" content="noindex, nofollow"/>
 
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -20,21 +20,15 @@
     <link rel="stylesheet" href="{% static '/ru/home/styles/overview.css' %}" type="text/css/">
     <link rel="stylesheet" href="{% static '/v/home/hi/built/styles/main.built.css' %}" type="text/css">
     <script src="{% static '/v/home/hi/built/scripts/head.built.js' %}" type="text/javascript" charset="utf-8"></script>
-    {% if not request.user.is_authenticated %}
-    <title>thekost</title>
-    <meta name="description" content="thekost"/>
-    {% else %}
     <title>Расписание занятий «ПсковГУ» для группы {{ product.title }}</title>
-    <meta name="description" content="Расписание занятий «ПсковГУ» для группы {{ product.title }} на 2021-2022 учебный год."/>
-    <meta name="keywords" content="новости псковгу {{ product.title }}, расписание пгу {{ product.title }}, пгу {{ product.title }}, псковгу {{ product.title }}, расписание онлайн псковгу {{ product.title }}, расписание занятий псковгу {{ product.title }}, преподаватели псковгу {{ product.title }}, расписание онлайн псковгу {{ product.title }}">
+    <meta name="description"
+          content="Расписание занятий «ПсковГУ» для группы {{ product.title }} на 2021-2022 учебный год."/>
+    <meta name="keywords"
+          content="новости псковгу {{ product.title }}, расписание пгу {{ product.title }}, пгу {{ product.title }}, псковгу {{ product.title }}, расписание онлайн псковгу {{ product.title }}, расписание занятий псковгу {{ product.title }}, преподаватели псковгу {{ product.title }}, расписание онлайн псковгу {{ product.title }}">
     <link type="image/x-icon" rel="shortcut icon" href="{% static '/images/pskovgu/favicon.ico' %}">
-    {% endif %}
 </head>
 {% endblock %}
 {% block content %}
-{% if not request.user.is_authenticated %}
-{% include 'ui_interface/universal_templates/fake_list.html' %}
-{% else %}
 <div class="ac-gn-blur"></div>
 <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
 <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
@@ -45,6 +39,52 @@
             overflow-y: scroll;
         }
     }
+
+    @media screen and (min-width: 1240px) {
+        .copy-container {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+        }
+    }
+
+    @media screen and (min-width: 1385px) {
+        .copy-container {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 85%;
+        }
+    }
+
+    @media screen and (min-width: 1450px) {
+        .copy-container {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+    }
+
+    @media screen and (min-width: 1550px) {
+        .copy-container {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 75%;
+        }
+    }
+
+    @media screen and (min-width: 1650px) {
+        .copy-container {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+        }
+    }
+
 
     @media screen and (min-width: 1750px) {
         .copy-container {
@@ -107,7 +147,7 @@
                     .updatetext {
                         font-size: 12px;
                         text-align: center;
-                        margin-top: 8px;
+                        margin-top: 30px;
                     }
                 }
 
@@ -115,7 +155,7 @@
                     .updatetext {
                         font-size: 12px;
                         text-align: right;
-                        margin-top: 10px;
+                        margin-top: 30px;
                     }
                 }
             </style>
@@ -129,5 +169,4 @@
         </div>
     </section>
 </main>
-{% endif %}
 {% endblock %}

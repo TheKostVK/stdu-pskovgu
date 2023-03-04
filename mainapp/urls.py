@@ -17,7 +17,6 @@ from .views import (
     ListgroupDetailView,
 )
 
-
 urlpatterns = [
     path('', BaseView.as_view(), name='base'),
     path('catalog/', CatalogView.as_view(), name='catalog'),
@@ -34,4 +33,3 @@ urlpatterns = [
     path('search/', SearchResultsView.as_view(), name='search_results'),
     path('list-group/', ListgroupDetailView.as_view(), name='list_group'),
 ]
-

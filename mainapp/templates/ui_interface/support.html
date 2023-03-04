@@ -2,9 +2,6 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
-{% if not request.user.is_authenticated %}
-{% include 'ui_interface/universal_templates/fake_list.html' %}
-{% else %}
 <div class="ac-gn-blur"></div>
 <meta name="robots" content="noindex"/>
 <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
@@ -105,5 +102,4 @@
     </section>
 </main>
 <!--/main-->
-{% endif %}
 {% endblock %}

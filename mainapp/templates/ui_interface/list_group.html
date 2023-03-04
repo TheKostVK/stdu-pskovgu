@@ -2,9 +2,6 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
-{% if not request.user.is_authenticated %}
-{% include 'ui_interface/universal_templates/fake_list.html' %}
-{% else %}
 <script type="text/javascript" src="{% static '/ac/globalnav/7/ru_RU/scripts/ac-globalnav.built.js' %}"></script>
 <main id="main" class="main" role="main" data-page-type="overview">
     <section class="section section-faq layout-1" data-component-list="Accordion" data-anim-scroll-group="Section - FAQ">
@@ -536,5 +533,4 @@
     </section>
 </main>
 <!--/main-->
-{% endif %}
 {% endblock %}
