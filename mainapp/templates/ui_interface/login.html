@@ -21,16 +21,11 @@
     <script src="{% static '/v/home/hi/built/scripts/head.built.js' %}" type="text/javascript" charset="utf-8"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="{% static 'css/accounts.css' %}"/>
-    {% if not request.user.is_authenticated %}
-    <title>thekost</title>
-    <meta name="description" content="thekost"/>
-    {% else %}
     <title>Авторизация | Расписание ПсковГУ</title>
     <meta name="description" content="Расписание занятий «ПсковГУ» для групп на 2021-2022 учебный год."/>
     <meta name="keywords"
           content="расписание, пгу, псковгу, расписание онлайн, расписание занятий, преподаватели псковгу, расписание онлайн">
     <link type="image/x-icon" rel="shortcut icon" href="{% static '/images/pskovgu/favicon.ico' %}">
-    {% endif %}
 </head>
 {% endblock %}
 {% block content %}
@@ -40,10 +35,10 @@
             <div class="col-md-12">
                 <div class="wrap d-md-flex">
                     <div class="text-wrap p-4 p-lg-5 d-flex img"
-                         style="background-image: url({% static 'images/t-work-bg.jpg' %});">
+                         style="background-image: url({% static 'images/t-work-bg3.jpg' %});">
                         <div class="text w-100">
-                            <h2 class="mb-4">Добро пожаловать на сайт с thekost</h2>
-                            <p>thekost</p>
+                            <h2 class="mb-4">С возвращением, мы вас ждали!</h2>
+                            <p>stdu-pskovgu.ru</p>
                         </div>
                     </div>
                     <div class="login-wrap p-4 p-md-5">

@@ -1,32 +1,44 @@
 {% load static %}
 <style>
-     @media screen and (max-width: 834px) {
+    @media screen and (max-width: 834px) {
         .unit-copy-wrapper {
             padding-left: 10px;
             padding-right: 10px
         }
     }
+
     @media screen and (min-width: 834px) {
         .copy-container {
-           padding-top: 105px;
+            padding-top: 105px;
             padding-bottom: 105px;
         }
     }
 </style>
-<section class="theme-light" data-anim-scroll-group="Section - Plans" data-component-list="LocalNavThemeSwitcher" style="margin-top: 30px; margin-bottom: 30px">
-    <div class="copy-container" style="border-radius: 5px; " id="includedContent">
-        <div class="unit-copy-wrapper">
-            <h3 style="padding-bottom: 55px;" class="headline">Проект «расписание ПсковГУ»</h3>
-            <!--<p class="subsection-performance-headline" style="text-align: center; padding-bottom: 20px;">
-                Совершенно новый взгляд на расписание</p>-->
-            <p class="" style="text-align: center; padding-bottom: 20px;">
-                Это <span style="font-weight: bold">НЕОФИЦИАЛЬНОЕ</span> расписание является студенческим проектом и не претендует на то, чтобы заменить
-                <a class="ac-gf-directory-column-section-link" href="http://rasp.pskgu.ru/">текущее расписание</a></p>
-            <p class="" style="text-align: center; padding-bottom: 20px;">
-                Информация представленная на сайте не является абсолютно достоверной и на неё не следует полагаться, а
-                также <br> мы рекомендуем пользоваться <a class="ac-gf-directory-column-section-link" href="http://rasp.pskgu.ru/">официальным расписанием</a></p>
-            <!--<a class="button" href="{% url 'login' %}" aria-label="Авторизация">Авторизация</a>-->
-            <a class="button-main" href="{% url 'registration' %}" aria-label="Регистрация">Регистрация</a>
+<div class="ac-gn-blur"></div>
+        <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+        <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
+<main class="main" role="main" data-page-type="overview" style="height: 85vh;">
+    <section class="theme-light" data-anim-scroll-group="Section - Plans" data-component-list="LocalNavThemeSwitcher"
+             style="margin-top: 30px; margin-bottom: 30px">
+        <div class="copy-container" style="border-radius: 5px; " id="includedContent">
+            <div class="unit-copy-wrapper">
+                <h3 style="padding-bottom: 55px;" class="headline">Проект «расписание ПсковГУ»</h3>
+                <!--<p class="subsection-performance-headline" style="text-align: center; padding-bottom: 20px;">
+                    Совершенно новый взгляд на расписание</p>-->
+                <p class="" style="text-align: center; padding-bottom: 20px;">
+                    Это <span style="font-weight: bold">НЕОФИЦИАЛЬНОЕ</span> расписание является студенческим проектом и
+                    не претендует на то, чтобы заменить
+                    <a class="ac-gf-directory-column-section-link" href="http://rasp.pskgu.ru/">текущее расписание</a>
+                </p>
+                <p class="" style="text-align: center; padding-bottom: 20px;">
+                    Информация представленная на сайте не является абсолютно достоверной и на неё не следует полагаться,
+                    а
+                    также <br> мы рекомендуем пользоваться <a class="ac-gf-directory-column-section-link"
+                                                              href="http://rasp.pskgu.ru/">официальным расписанием</a>
+                </p>
+                <!--<a class="button" href="{% url 'login' %}" aria-label="Авторизация">Авторизация</a>-->
+                <a class="button-main" href="{% url 'registration' %}" aria-label="Регистрация">Регистрация</a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</main>

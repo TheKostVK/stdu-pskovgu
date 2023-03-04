@@ -67,8 +67,6 @@ class RegistrationForm(forms.ModelForm):
         invitation_code = self.cleaned_data['invitation_code']
         now = datetime.datetime.now()
         invitation_code_today = str(now.day) + str(now.month) + str(now.hour)
-        print(invitation_code_today)
-        print(invitation_code)
         if int(invitation_code) != int(invitation_code_today):
             raise forms.ValidationError('Код недействителен')
         return self.cleaned_data

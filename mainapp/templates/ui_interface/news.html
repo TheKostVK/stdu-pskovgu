@@ -10,108 +10,256 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="{% static '/ac/globalnav/7/ru_RU/styles/ac-globalnav.built.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static '/ac/localnav/6/styles/ac-localnav.built.css' %}"/>
-    <link rel="stylesheet" type="text/css" href="{% static '/ac/globalfooter/7/ru_RU/styles/ac-globalfooter.built.css' %}"/>
+    <link rel="stylesheet" type="text/css"
+          href="{% static '/ac/globalfooter/7/ru_RU/styles/ac-globalfooter.built.css' %}"/>
     <link rel="stylesheet" href="{% static '/wss/fonts' %}"/>
     <link rel="stylesheet" href="{% static '/v/home/hi/built/styles/overview.built.css' %}" type="text/css"/>
     <link rel="stylesheet" href="{% static '/ru/home/styles/overview.css' %}" type="text/css/">
     <link rel="stylesheet" href="{% static '/v/home/hi/built/styles/main.built.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'news/news.css' %}" type="text/css">
     <script src="{% static '/v/home/hi/built/scripts/head.built.js' %}" type="text/javascript" charset="utf-8"></script>
-    {% if not request.user.is_authenticated %}
-    <title>thekost</title>
-    <meta name="description" content="thekost"/>
-    {% else %}
     <meta name="description" content="Новости «ПсковГУ»">
     <title>Новости «ПсковГУ»</title>
+    <meta name="description" content="Новости «ПсковГУ»"/>
     <meta name="keywords"
-          content="новости псковгу, расписание пгу, пгу, псковгу, расписание онлайн псковгу, расписание занятий псковгу, преподаватели псковгу, расписание онлайн псковгу">
+          content="новости псковгу, расписание пгу, пгу, псковгу, новости онлайн псковгу, новости занятий псковгу, преподаватели псковгу, новости онлайн псковгу">
     <link type="image/x-icon" rel="shortcut icon" href="{% static '/images/pskovgu/favicon.ico' %}">
-    {% endif %}
 </head>
 {% endblock %}
 {% block content %}
-{% if not request.user.is_authenticated %}
-{% include 'ui_interface/universal_templates/fake_list.html' %}
-{% else %}
 <div class="ac-gn-blur"></div>
+<meta name="robots" content="noindex"/>
 <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
 <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
 <script type="text/javascript" src="{% static '/ac/globalnav/7/ru_RU/scripts/ac-globalnav.built.js' %}"></script>
-<style>
-    @media screen and (max-width: 1160px) {
-        .copy-container {
-            overflow-y: scroll;
-        }
-    }
+<main id="main" class="main" role="main" data-page-type="overview">
+    <section class="homepage-section collection-module" data-module-template="ribbon">
+        <div data-unit-id="shop-online" style="border-radius: 10px">
+            <div class="module-content">
+                <div class="ribbon-shop-online">
+                    <div class="section-content section-content-shop-online">
+                        <span class="shop-ribbon-copy">В настоящее время страница находится в разработке и часть функций недоступна.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="column main-column">
+        <a class="article" href="#">
+            <figure class="article-image is-16by9">
+                <img src="{% static 'news/news_content/1.jpg' %}"
+                     alt="">
+            </figure>
+            <div class="article-body">
+                <h2 class="article-title">
+                    Фронтовые песни, диалоги, танцы, письма: "Голос Победы" прозвучал сегодня в ПсковГУ
+                </h2>
+                <p class="article-content">
+                    Во Всероссийской акции, посвященной празднованию 9 мая, приняли участие как студенты, так и
+                    профессорско-преподавательский состав университета. Почетными гостями мероприятия стали
+                    псковичи-дети войны, ранее работавшие в вузе.
 
-    @media screen and (min-width: 1750px) {
-        .copy-container {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 60%;
-        }
-    }
-
-    @media screen and (max-width: 600px) {
-        .updatetext {
-            font-size: 12px;
-            text-align: center;
-            margin-top: 8px;
-        }
-    }
-
-    @media screen and (min-width: 1200px) {
-        .updatetext {
-            font-size: 12px;
-            text-align: right;
-            margin-top: 10px;
-        }
-    }
-</style>
-<main class="main" role="main" data-page-type="overview">
-    <link rel="stylesheet" href="{% static 'list_group/main.built.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'list_group/overview.built.css' %}" type="text/css">
-    <link href="{% static 'timetable/css/css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'timetable/css/style.css' %}" rel="stylesheet" type="text/css">
-    <style>
-    @media screen and (max-width: 600px) {
-        .copy-container {
-            height: 60%;
-            margin-top: 150px;
-            margin-bottom: 100px
-        }
-    }
-
-    @media screen and (min-width: 1200px) {
-        .copy-container {
-            height: 40%;
-            margin-top: 150px;
-            margin-bottom: 100px
-        }
-    }
-</style>
-    <div class="copy-container">
-        <h2 class="typography-section-headline plans-headline large-10 medium-12 small-12 center"
-            style="padding-bottom: 30px">
-            Пусто(</h2>
-        <p class="typography-eyebrow large-7 medium-9 small-12 center" style="padding-left: 20px">Раздел "Новости"
-            находится в разработке!</p>
-        <br>
-        <a href="{% url 'base' %}" class="button">
-            <span>Вернуться на главную</span>
+                    Специально для этой торжественной встречи студенты ПсковГУ подготовили театрально-концертную
+                    постановку "После рассвета...", которая погрузила зрителей в события Великой Отечественной войны.
+                </p>
+                <footer class="article-info">
+                    <span>TheKost_</span>
+                    <span>10.05.2022</span>
+                    <span>Источник: Telegram</span>
+                </footer>
+            </div>
         </a>
-    </div>
-    <!--<div data-unit-id="1">
-               <div class="module-content">
-                   <div class="unit-copy-wrapper">
-                       <img style="width: 350px; height: auto;"
-                            src="{% static 'images/pskovgu/logo_blue_pic-removebg-preview.png'%}" alt="Логотип ПсковГУ">
-                       <h2 class="headline">Раздел "Новости" находится в разработке!</h2>
-                       <h3 class="subhead" role="presentation">Oh. So. Pro.</h3>
-                       <a class="button" href="{% url 'base' %}" aria-label="Вернуться на главную">Вернуться на главную</a>
-                   </div>
-               </div>
-           </div>-->
+        <a class="article first-article" href="#">
+            <figure class="article-image is-4by3">
+                <img src="{% static 'news/news_content/2.jpg' %}" alt="">
+            </figure>
+            <div class="article-body">
+                <h2 class="article-title">
+                    Студенты Института гуманитарных науки и языковых коммуникаций #ПсковГУ подготовили концерт «Жива в
+                    нашем сердце Победная дата»
+                </h2>
+                <p class="article-content">
+                    "Не в землю нашу полегли когда-то, а превратились в белых журавлей", - летят по университетскому
+                    скверу слова песни, известной, наверное, каждому. И дальше, из сквера - по улице, ввысь и вширь, в
+                    сердце каждого.
+
+                    Студенты Института гуманитарных науки и языковых коммуникаций #ПсковГУ подготовили концерт «Жива в
+                    нашем сердце Победная дата», посвященный празднованию Дня Победы.
+
+                    Читали фронтовые письма, вспоминали стихи, посвященные Великой Отечественной войне, танцевали...
+                    Спасибо, ребята!
+                </p>
+                <footer class="article-info">
+                    <span>TheKost_</span>
+                    <span>10.05.2022</span>
+                    <span>Источник: Telegram</span>
+                </footer>
+            </div>
+        </a>
+    </section>
+
+    <section class="column main-column">
+        <a class="article first-article" href="#">
+            <figure class="article-image is-4by3">
+                <img src="{% static 'news/news_content/3.jpg' %}" alt="">
+            </figure>
+            <div class="article-body">
+                <h2 class="article-title">
+                    Неделя экологии в ПсковГУ
+                </h2>
+                <p class="article-content">
+                    Знаете ли вы, что пластиковые крышки, попадая в общий мусор, разлагаются более 400 лет? Что
+                    использованные батарейки выделяют токсичные вещества?
+
+                    Присоединяйтесь к акции по сбору пластиковых крышек, батареек и бумаги в рамках Недели экологии с 9
+                    по 13 мая. Место сбора: улица Л.Толстого, 6, кабинет 111.
+
+                    А уже 13 мая в 15.00 пройдет настольная игра "Green-law", посвященная экологии и праву в этой сфере.
+                    Собирайте команду от 3 до 7 человек и приходи побороться за званием самого эрудированного эколога.
+                </p>
+                <footer class="article-info">
+                    <span>TheKost_</span>
+                    <span>9.05.2022</span>
+                    <span>Источник: Telegram</span>
+                </footer>
+            </div>
+        </a>
+
+        <div class="columns">
+            <div class="column nested-column">
+                <a class="article" href="#">
+                    <figure class="article-image is-16by9">
+                        <img src="{% static 'news/news_content/5.jpg' %}" alt="">
+                    </figure>
+                    <div class="article-body">
+                        <h2 class="article-title">
+                            Проект "Летний университет"
+                        </h2>
+                        <p class="article-content">
+                            Больше 650 студентов, 25 образовательных программ и 14 российских вузов из 7 федеральных
+                            округов: в июле стартует федеральный проект "Летний университет", оператором которого
+                            является #ПсковГУ.
+
+                            Кроме образовательной составляющей студентов ждут экскурсионные программы, спортивные
+                            мероприятия, кружковая деятельность по интересам, а также тематические встречи, форумы,
+                            мастер-классы.
+
+                        </p>
+                        <footer class="article-info">
+                            <span>TheKost_</span>
+                            <span>8.05.2022</span>
+                            <span>Источник: Telegram</span>
+                        </footer>
+                    </div>
+                </a>
+            </div>
+
+            <div class="column">
+                <a class="article" href="#">
+                    <figure class="article-image is-16by9">
+                        <img src="{% static 'news/news_content/4.jpg' %}" alt="">
+                    </figure>
+                    <div class="article-body">
+                        <h2 class="article-title">
+                            Победа в 77-ой эстафете на призы газеты «Псковская правда»
+                        </h2>
+                        <p class="article-content">
+                            Первое и второе место среди женских команд ссузов и вузов области на этих состязаниях заняли
+                            сборные университета.
+                        </p>
+                        <footer class="article-info">
+                            <span>TheKost_</span>
+                            <span>8.05.2022</span>
+                            <span>Источник: Telegram</span>
+                        </footer>
+                    </div>
+                </a>
+                <a class="article" href="#">
+                    <div class="article-body">
+                        <h2 class="article-title">
+                            IT-направление
+                        </h2>
+                        <p class="article-content">
+                            Преподаватели ПсковГУ и студенты, обучающиеся на IT-направлении, рассказали ГТРК Псков,
+                            почему выбрали именно эту профессию.
+                        </p>
+                        <footer class="article-info">
+                            <span>TheKost_</span>
+                            <span>8.05.2022</span>
+                            <span>Источник: Telegram</span>
+                        </footer>
+                    </div>
+                </a>
+                <a class="article" href="#">
+                    <div class="article-body">
+                        <h2 class="article-title">
+                            Волонтёрский центр ПсковГУ объявил старт сбора для приюта «Лесопилка» 🐕
+                        </h2>
+                        <p class="article-content">
+                            В #ПсковГУ с 3 по 13 мая организованы точки сбора, в которые можно принести крупы, каши,
+                            корма,
+                            консервы, старые газеты и журналы, поводки, ошейники, игрушки и др.
+                        </p>
+                        <footer class="article-info">
+                            <span>TheKost_</span>
+                            <span>8.05.2022</span>
+                            <span>Источник: Telegram</span>
+                        </footer>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="column">
+        <a class="article" href="#">
+            <figure class="article-image is-3by2">
+                <img src="{% static 'news/news_content/6.jpg' %}" alt="">
+            </figure>
+            <div class="article-body">
+                <h2 class="article-title">
+                    «Южная ночь» - коллекция одежды разработанная дизайнерами Театра мод #ПсковГУ
+                </h2>
+                <p class="article-content">
+                    «Южная ночь» - так называется коллекция одежды, разработанная дизайнерами Театра мод ПсковГУ.
+
+                    Щепотка современных трендов, горсть традиционных мотивов, фантазийные головные уборы, черный тюль и
+                    яркие радостные цветы: стилизованные наряды, созданные студентками, достойно представили вуз на
+                    конкурсе национального костюма, который в минувшие выходные стартовал в Пскове.
+
+                    Посетители одного из торговых центров познакомились с работами псковских мастериц, дизайнеров и
+                    творческих коллективов. Как это было - смотрим в сюжете ГТРК.
+                </p>
+                <footer class="article-info">
+                    <span>TheKost_</span>
+                    <span>8.05.2022</span>
+                    <span>Источник: Telegram</span>
+                </footer>
+            </div>
+        </a>
+        <a class="article" href="#">
+            <div class="article-body">
+                <h2 class="article-title">
+                    «Неделя карьеры в ПсковГУ» 2022.
+
+                </h2>
+                <p class="article-content">
+
+                    101 мероприятие, 152 спикера, 2298 участников-студентов: в университете завершилась «Неделя карьеры
+                    в ПсковГУ» 2022.
+                    На протяжении почти полутора месяцев ребята встречались с топовыми работодателями региона, узнавали
+                    о возможностях трудоустройства в Псковской области и прокачивали свои soft skills на мастер-классах.
+
+
+                </p>
+                <footer class="article-info">
+                    <span>TheKost_</span>
+                    <span>7.05.2022</span>
+                    <span>Источник: Telegram</span>
+                </footer>
+            </div>
+        </a>
+    </section>
 </main>
-{% endif %}
+<!--/main-->
 {% endblock %}
